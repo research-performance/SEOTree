@@ -1,0 +1,5152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Codes Tree</title>
+
+  <!-- jsTree CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/themes/default/style.min.css" />
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <!-- jsTree JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.12/jstree.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; }
+    #tree-search { margin-bottom: 10px; width: 100%; max-width: 400px; padding: 6px; font-size: 14px; }
+    #seo-tree { max-width: 1000px; border: 1px solid #ddd; padding: 10px; }
+      /* 🔍 Search highlight colour */
+  .jstree-search {
+    color: #1565C0 !important;      /* blue */
+    font-weight: 600;
+    padding: 1px 2px;
+    border-radius: 3px;
+  }
+  </style>
+</head>
+<body>
+
+<h2>Socio-economic Objectives (SEO)</h2>
+
+<input type="text" id="tree-search" placeholder="Search SEO codes (code or description)..." />
+<div id="seo-tree"></div>
+
+<script>
+  // SEO data
+  var seoData = [
+  {
+    "id": "10",
+    "text": "10 – ANIMAL PRODUCTION AND ANIMAL PRIMARY PRODUCTS",
+    "children": [
+      {
+        "id": "1001",
+        "text": "1001 – Environmentally sustainable animal production",
+        "children": [
+          {
+            "id": "100101",
+            "text": "100101 – Management of gaseous waste from animal production (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "100102",
+            "text": "100102 – Management of liquid waste from animal production (excl. water)",
+            "children": []
+          },
+          {
+            "id": "100103",
+            "text": "100103 – Management of solid waste from animal production",
+            "children": []
+          },
+          {
+            "id": "100104",
+            "text": "100104 – Management of water consumption by animal production",
+            "children": []
+          },
+          {
+            "id": "100199",
+            "text": "100199 – Environmentally sustainable animal production not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1002",
+        "text": "1002 – Fisheries - aquaculture",
+        "children": [
+          {
+            "id": "100201",
+            "text": "100201 – Aquaculture crustaceans (excl. rock lobster and prawns)",
+            "children": []
+          },
+          {
+            "id": "100202",
+            "text": "100202 – Aquaculture fin fish (excl. tuna)",
+            "children": []
+          },
+          {
+            "id": "100203",
+            "text": "100203 – Aquaculture molluscs (excl. oysters)",
+            "children": []
+          },
+          {
+            "id": "100204",
+            "text": "100204 – Aquaculture oysters",
+            "children": []
+          },
+          {
+            "id": "100205",
+            "text": "100205 – Aquaculture prawns",
+            "children": []
+          },
+          {
+            "id": "100206",
+            "text": "100206 – Aquaculture rock lobster",
+            "children": []
+          },
+          {
+            "id": "100207",
+            "text": "100207 – Aquaculture tuna",
+            "children": []
+          },
+          {
+            "id": "100299",
+            "text": "100299 – Fisheries - aquaculture not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1003",
+        "text": "1003 – Fisheries - wild caught",
+        "children": [
+          {
+            "id": "100301",
+            "text": "100301 – Fisheries - recreational freshwater",
+            "children": []
+          },
+          {
+            "id": "100302",
+            "text": "100302 – Fisheries - recreational marine ",
+            "children": []
+          },
+          {
+            "id": "100303",
+            "text": "100303 – Wild caught crustaceans (excl. rock lobster and prawns)",
+            "children": []
+          },
+          {
+            "id": "100304",
+            "text": "100304 – Wild caught edible molluscs",
+            "children": []
+          },
+          {
+            "id": "100305",
+            "text": "100305 – Wild caught fin fish (excl. tuna)",
+            "children": []
+          },
+          {
+            "id": "100306",
+            "text": "100306 – Wild caught prawns",
+            "children": []
+          },
+          {
+            "id": "100307",
+            "text": "100307 – Wild caught rock lobster",
+            "children": []
+          },
+          {
+            "id": "100308",
+            "text": "100308 – Wild caught tuna",
+            "children": []
+          },
+          {
+            "id": "100399",
+            "text": "100399 – Fisheries - wild caught not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1004",
+        "text": "1004 – Livestock raising",
+        "children": [
+          {
+            "id": "100401",
+            "text": "100401 – Beef cattle",
+            "children": []
+          },
+          {
+            "id": "100402",
+            "text": "100402 – Dairy cattle",
+            "children": []
+          },
+          {
+            "id": "100403",
+            "text": "100403 – Deer",
+            "children": []
+          },
+          {
+            "id": "100404",
+            "text": "100404 – Game livestock (e.g. kangaroos, wallabies, camels, buffaloes)",
+            "children": []
+          },
+          {
+            "id": "100405",
+            "text": "100405 – Goats",
+            "children": []
+          },
+          {
+            "id": "100406",
+            "text": "100406 – Horses",
+            "children": []
+          },
+          {
+            "id": "100407",
+            "text": "100407 – Insects",
+            "children": []
+          },
+          {
+            "id": "100408",
+            "text": "100408 – Minor livestock (e.g. alpacas, ostriches, crocodiles, farmed rabbits)",
+            "children": []
+          },
+          {
+            "id": "100409",
+            "text": "100409 – Non-cattle dairy",
+            "children": []
+          },
+          {
+            "id": "100410",
+            "text": "100410 – Pigs",
+            "children": []
+          },
+          {
+            "id": "100411",
+            "text": "100411 – Poultry",
+            "children": []
+          },
+          {
+            "id": "100412",
+            "text": "100412 – Sheep for meat",
+            "children": []
+          },
+          {
+            "id": "100413",
+            "text": "100413 – Sheep for wool",
+            "children": []
+          },
+          {
+            "id": "100499",
+            "text": "100499 – Livestock raising not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1005",
+        "text": "1005 – Pasture, browse and fodder crops",
+        "children": [
+          {
+            "id": "100501",
+            "text": "100501 – Browse crops",
+            "children": []
+          },
+          {
+            "id": "100502",
+            "text": "100502 – Lucerne",
+            "children": []
+          },
+          {
+            "id": "100503",
+            "text": "100503 – Native and residual pastures",
+            "children": []
+          },
+          {
+            "id": "100504",
+            "text": "100504 – Non-cereal crops (non-cereal crops for hay/silage/green feed)",
+            "children": []
+          },
+          {
+            "id": "100505",
+            "text": "100505 – Sown pastures (excl. lucerne)",
+            "children": []
+          },
+          {
+            "id": "100599",
+            "text": "100599 – Pasture, browse and fodder crops not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1006",
+        "text": "1006 – Primary products from animals",
+        "children": [
+          {
+            "id": "100601",
+            "text": "100601 – Eggs",
+            "children": []
+          },
+          {
+            "id": "100602",
+            "text": "100602 – Honey",
+            "children": []
+          },
+          {
+            "id": "100603",
+            "text": "100603 – Pearls",
+            "children": []
+          },
+          {
+            "id": "100604",
+            "text": "100604 – Raw wool",
+            "children": []
+          },
+          {
+            "id": "100605",
+            "text": "100605 – Unprocessed or minimally processed fish",
+            "children": []
+          },
+          {
+            "id": "100606",
+            "text": "100606 – Unprocessed or minimally processed milk",
+            "children": []
+          },
+          {
+            "id": "100699",
+            "text": "100699 – Primary products from animals not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1099",
+        "text": "1099 – Other animal production and animal primary products",
+        "children": [
+          {
+            "id": "109901",
+            "text": "109901 – Animal adaptation to climate change ",
+            "children": []
+          },
+          {
+            "id": "109902",
+            "text": "109902 – Animal welfare",
+            "children": []
+          },
+          {
+            "id": "109903",
+            "text": "109903 – Fish product traceability and quality assurance",
+            "children": []
+          },
+          {
+            "id": "109904",
+            "text": "109904 – Livestock product traceability and quality assurance",
+            "children": []
+          },
+          {
+            "id": "109999",
+            "text": "109999 – Other animal production and animal primary products not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "text": "11 – COMMERCIAL SERVICES AND TOURISM",
+    "children": [
+      {
+        "id": "1101",
+        "text": "1101 – Environmentally sustainable commercial services and tourism",
+        "children": [
+          {
+            "id": "110101",
+            "text": "110101 – Management of gaseous waste from commercial services and tourism (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "110102",
+            "text": "110102 – Management of liquid waste from commercial services and tourism (excl. water)",
+            "children": []
+          },
+          {
+            "id": "110103",
+            "text": "110103 – Management of solid waste from commercial services and tourism",
+            "children": []
+          },
+          {
+            "id": "110104",
+            "text": "110104 – Management of water consumption by commercial services and tourism",
+            "children": []
+          },
+          {
+            "id": "110199",
+            "text": "110199 – Environmentally sustainable commercial services and tourism not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1102",
+        "text": "1102 – Financial services",
+        "children": [
+          {
+            "id": "110201",
+            "text": "110201 – Finance services",
+            "children": []
+          },
+          {
+            "id": "110202",
+            "text": "110202 – Investment services (excl. superannuation)",
+            "children": []
+          },
+          {
+            "id": "110203",
+            "text": "110203 – Superannuation and insurance services",
+            "children": []
+          },
+          {
+            "id": "110299",
+            "text": "110299 – Financial services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1103",
+        "text": "1103 – Property, business support services and trade",
+        "children": [
+          {
+            "id": "110301",
+            "text": "110301 – Administration and business support services",
+            "children": []
+          },
+          {
+            "id": "110302",
+            "text": "110302 – Professional, scientific and technical services",
+            "children": []
+          },
+          {
+            "id": "110303",
+            "text": "110303 – Property services (incl. security)",
+            "children": []
+          },
+          {
+            "id": "110304",
+            "text": "110304 – Wholesale and retail trade",
+            "children": []
+          },
+          {
+            "id": "110399",
+            "text": "110399 – Property, business support services and trade not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1104",
+        "text": "1104 – Tourism services",
+        "children": [
+          {
+            "id": "110401",
+            "text": "110401 – Economic issues in tourism",
+            "children": []
+          },
+          {
+            "id": "110402",
+            "text": "110402 – Socio-cultural issues in tourism",
+            "children": []
+          },
+          {
+            "id": "110403",
+            "text": "110403 – Tourism infrastructure development",
+            "children": []
+          },
+          {
+            "id": "110499",
+            "text": "110499 – Tourism services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1105",
+        "text": "1105 – Water and waste services",
+        "children": [
+          {
+            "id": "110501",
+            "text": "110501 – Waste management services",
+            "children": []
+          },
+          {
+            "id": "110502",
+            "text": "110502 – Waste recycling services",
+            "children": []
+          },
+          {
+            "id": "110503",
+            "text": "110503 – Water recycling services (incl. sewage and greywater)",
+            "children": []
+          },
+          {
+            "id": "110504",
+            "text": "110504 – Water services and utilities",
+            "children": []
+          },
+          {
+            "id": "110599",
+            "text": "110599 – Water and waste services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1199",
+        "text": "1199 – Other commercial services and tourism",
+        "children": [
+          {
+            "id": "119901",
+            "text": "119901 – Hospitality services",
+            "children": []
+          },
+          {
+            "id": "119902",
+            "text": "119902 – Recreational services",
+            "children": []
+          },
+          {
+            "id": "119999",
+            "text": "119999 – Other commercial services and tourism not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "text": "12 – CONSTRUCTION",
+    "children": [
+      {
+        "id": "1201",
+        "text": "1201 – Building management and services",
+        "children": [
+          {
+            "id": "120101",
+            "text": "120101 – Civil building management and services",
+            "children": []
+          },
+          {
+            "id": "120102",
+            "text": "120102 – Commercial building management and services",
+            "children": []
+          },
+          {
+            "id": "120103",
+            "text": "120103 – Industrial building management and services",
+            "children": []
+          },
+          {
+            "id": "120104",
+            "text": "120104 – Institutional building management and services",
+            "children": []
+          },
+          {
+            "id": "120105",
+            "text": "120105 – Residential building management and services",
+            "children": []
+          },
+          {
+            "id": "120199",
+            "text": "120199 – Building management and services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1202",
+        "text": "1202 – Construction design",
+        "children": [
+          {
+            "id": "120201",
+            "text": "120201 – Civil construction design",
+            "children": []
+          },
+          {
+            "id": "120202",
+            "text": "120202 – Commercial construction design",
+            "children": []
+          },
+          {
+            "id": "120203",
+            "text": "120203 – Industrial construction design",
+            "children": []
+          },
+          {
+            "id": "120204",
+            "text": "120204 – Institutional construction design",
+            "children": []
+          },
+          {
+            "id": "120205",
+            "text": "120205 – Residential construction design",
+            "children": []
+          },
+          {
+            "id": "120299",
+            "text": "120299 – Construction design not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1203",
+        "text": "1203 – Construction materials performance and processes",
+        "children": [
+          {
+            "id": "120301",
+            "text": "120301 – Cement and concrete materials",
+            "children": []
+          },
+          {
+            "id": "120302",
+            "text": "120302 – Glass materials",
+            "children": []
+          },
+          {
+            "id": "120303",
+            "text": "120303 – Metals ",
+            "children": []
+          },
+          {
+            "id": "120304",
+            "text": "120304 – Polymeric materials and paints",
+            "children": []
+          },
+          {
+            "id": "120305",
+            "text": "120305 – Stone, ceramics and clay materials",
+            "children": []
+          },
+          {
+            "id": "120306",
+            "text": "120306 – Timber materials",
+            "children": []
+          },
+          {
+            "id": "120399",
+            "text": "120399 – Construction materials performance and processes not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1204",
+        "text": "1204 – Construction planning",
+        "children": [
+          {
+            "id": "120401",
+            "text": "120401 – Civil construction planning",
+            "children": []
+          },
+          {
+            "id": "120402",
+            "text": "120402 – Commercial construction planning",
+            "children": []
+          },
+          {
+            "id": "120403",
+            "text": "120403 – Industrial construction planning",
+            "children": []
+          },
+          {
+            "id": "120404",
+            "text": "120404 – Regional planning",
+            "children": []
+          },
+          {
+            "id": "120405",
+            "text": "120405 – Residential construction planning",
+            "children": []
+          },
+          {
+            "id": "120406",
+            "text": "120406 – Urban planning",
+            "children": []
+          },
+          {
+            "id": "120499",
+            "text": "120499 – Construction planning not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1205",
+        "text": "1205 – Construction processes",
+        "children": [
+          {
+            "id": "120501",
+            "text": "120501 – Civil construction processes",
+            "children": []
+          },
+          {
+            "id": "120502",
+            "text": "120502 – Commercial construction processes",
+            "children": []
+          },
+          {
+            "id": "120503",
+            "text": "120503 – Industrial construction processes",
+            "children": []
+          },
+          {
+            "id": "120504",
+            "text": "120504 – Institutional construction processes",
+            "children": []
+          },
+          {
+            "id": "120505",
+            "text": "120505 – Residential construction processes",
+            "children": []
+          },
+          {
+            "id": "120599",
+            "text": "120599 – Construction processes not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1206",
+        "text": "1206 – Environmentally sustainable construction activities",
+        "children": [
+          {
+            "id": "120601",
+            "text": "120601 – Management of gaseous waste from construction activities (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "120602",
+            "text": "120602 – Management of liquid waste from construction activities (excl. water)",
+            "children": []
+          },
+          {
+            "id": "120603",
+            "text": "120603 – Management of solid waste from construction activities",
+            "children": []
+          },
+          {
+            "id": "120604",
+            "text": "120604 – Management of water consumption by construction activities",
+            "children": []
+          },
+          {
+            "id": "120699",
+            "text": "120699 – Environmentally sustainable construction activities not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1299",
+        "text": "1299 – Other construction",
+        "children": [
+          {
+            "id": "129901",
+            "text": "129901 – Adaptation to climate change in construction",
+            "children": []
+          },
+          {
+            "id": "129999",
+            "text": "129999 – Other construction not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "text": "13 – CULTURE AND SOCIETY",
+    "children": [
+      {
+        "id": "1301",
+        "text": "1301 – Arts",
+        "children": [
+          {
+            "id": "130101",
+            "text": "130101 – Design",
+            "children": []
+          },
+          {
+            "id": "130102",
+            "text": "130102 – Music",
+            "children": []
+          },
+          {
+            "id": "130103",
+            "text": "130103 – The creative arts ",
+            "children": []
+          },
+          {
+            "id": "130104",
+            "text": "130104 – The performing arts ",
+            "children": []
+          },
+          {
+            "id": "130199",
+            "text": "130199 – Arts not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1302",
+        "text": "1302 – Communication",
+        "children": [
+          {
+            "id": "130201",
+            "text": "130201 – Communication across languages and culture",
+            "children": []
+          },
+          {
+            "id": "130202",
+            "text": "130202 – Languages and linguistics",
+            "children": []
+          },
+          {
+            "id": "130203",
+            "text": "130203 – Literature",
+            "children": []
+          },
+          {
+            "id": "130204",
+            "text": "130204 – The media",
+            "children": []
+          },
+          {
+            "id": "130205",
+            "text": "130205 – Visual communication",
+            "children": []
+          },
+          {
+            "id": "130299",
+            "text": "130299 – Communication not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1303",
+        "text": "1303 – Ethics",
+        "children": [
+          {
+            "id": "130301",
+            "text": "130301 – Bioethics",
+            "children": []
+          },
+          {
+            "id": "130302",
+            "text": "130302 – Business ethics",
+            "children": []
+          },
+          {
+            "id": "130303",
+            "text": "130303 – Environmental ethics",
+            "children": []
+          },
+          {
+            "id": "130304",
+            "text": "130304 – Social ethics",
+            "children": []
+          },
+          {
+            "id": "130305",
+            "text": "130305 – Technological ethics",
+            "children": []
+          },
+          {
+            "id": "130306",
+            "text": "130306 – Workplace and organisational ethics (excl. business ethics)",
+            "children": []
+          },
+          {
+            "id": "130399",
+            "text": "130399 – Ethics not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1304",
+        "text": "1304 – Heritage",
+        "children": [
+          {
+            "id": "130401",
+            "text": "130401 – Assessment of heritage value",
+            "children": []
+          },
+          {
+            "id": "130402",
+            "text": "130402 – Conserving collections and movable cultural heritage",
+            "children": []
+          },
+          {
+            "id": "130403",
+            "text": "130403 – Conserving intangible cultural heritage",
+            "children": []
+          },
+          {
+            "id": "130404",
+            "text": "130404 – Conserving natural heritage",
+            "children": []
+          },
+          {
+            "id": "130405",
+            "text": "130405 – Conserving the historic environment",
+            "children": []
+          },
+          {
+            "id": "130499",
+            "text": "130499 – Heritage not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1305",
+        "text": "1305 – Religion",
+        "children": [
+          {
+            "id": "130501",
+            "text": "130501 – Religion and society",
+            "children": []
+          },
+          {
+            "id": "130502",
+            "text": "130502 – Religious philosophies and belief systems",
+            "children": []
+          },
+          {
+            "id": "130503",
+            "text": "130503 – Religious rituals and traditions (excl. structures)",
+            "children": []
+          },
+          {
+            "id": "130504",
+            "text": "130504 – Religious structures",
+            "children": []
+          },
+          {
+            "id": "130599",
+            "text": "130599 – Religion not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1306",
+        "text": "1306 – Sport, exercise and recreation",
+        "children": [
+          {
+            "id": "130601",
+            "text": "130601 – Exercise",
+            "children": []
+          },
+          {
+            "id": "130602",
+            "text": "130602 – Organised sports",
+            "children": []
+          },
+          {
+            "id": "130603",
+            "text": "130603 – Recreation and leisure activities (excl. sport and exercise)",
+            "children": []
+          },
+          {
+            "id": "130699",
+            "text": "130699 – Sport, exercise and recreation not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1307",
+        "text": "1307 – Understanding past societies",
+        "children": [
+          {
+            "id": "130701",
+            "text": "130701 – Understanding Africa’s past",
+            "children": []
+          },
+          {
+            "id": "130702",
+            "text": "130702 – Understanding Asia’s past",
+            "children": []
+          },
+          {
+            "id": "130703",
+            "text": "130703 – Understanding Australia’s past",
+            "children": []
+          },
+          {
+            "id": "130704",
+            "text": "130704 – Understanding Europe’s past",
+            "children": []
+          },
+          {
+            "id": "130705",
+            "text": "130705 – Understanding New Zealand’s past",
+            "children": []
+          },
+          {
+            "id": "130706",
+            "text": "130706 – Understanding the past of the Americas",
+            "children": []
+          },
+          {
+            "id": "130799",
+            "text": "130799 – Understanding past societies not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1399",
+        "text": "1399 – Other culture and society",
+        "children": [
+          {
+            "id": "139999",
+            "text": "139999 – Other culture and society not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "text": "14 – DEFENCE",
+    "children": [
+      {
+        "id": "1401",
+        "text": "1401 – Defence",
+        "children": [
+          {
+            "id": "140101",
+            "text": "140101 – Air",
+            "children": []
+          },
+          {
+            "id": "140102",
+            "text": "140102 – Command, control and communications",
+            "children": []
+          },
+          {
+            "id": "140103",
+            "text": "140103 – Cyber and electronic security and warfare",
+            "children": []
+          },
+          {
+            "id": "140104",
+            "text": "140104 – Emerging defence technologies",
+            "children": []
+          },
+          {
+            "id": "140105",
+            "text": "140105 – Intelligence, surveillance and space",
+            "children": []
+          },
+          {
+            "id": "140106",
+            "text": "140106 – Land",
+            "children": []
+          },
+          {
+            "id": "140107",
+            "text": "140107 – Logistics",
+            "children": []
+          },
+          {
+            "id": "140108",
+            "text": "140108 – Maritime",
+            "children": []
+          },
+          {
+            "id": "140109",
+            "text": "140109 – National security",
+            "children": []
+          },
+          {
+            "id": "140110",
+            "text": "140110 – Personnel",
+            "children": []
+          },
+          {
+            "id": "140199",
+            "text": "140199 – Defence not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "text": "15 – ECONOMIC FRAMEWORK ",
+    "children": [
+      {
+        "id": "1501",
+        "text": "1501 – International trade policy",
+        "children": [
+          {
+            "id": "150101",
+            "text": "150101 – International agreements on trade",
+            "children": []
+          },
+          {
+            "id": "150102",
+            "text": "150102 – Trade assistance and protection",
+            "children": []
+          },
+          {
+            "id": "150103",
+            "text": "150103 – Trade policy",
+            "children": []
+          },
+          {
+            "id": "150199",
+            "text": "150199 – International trade policy not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1502",
+        "text": "1502 – Macroeconomics",
+        "children": [
+          {
+            "id": "150201",
+            "text": "150201 – Balance of payments",
+            "children": []
+          },
+          {
+            "id": "150202",
+            "text": "150202 – Demography",
+            "children": []
+          },
+          {
+            "id": "150203",
+            "text": "150203 – Economic growth",
+            "children": []
+          },
+          {
+            "id": "150204",
+            "text": "150204 – Exchange rates",
+            "children": []
+          },
+          {
+            "id": "150205",
+            "text": "150205 – Fiscal policy",
+            "children": []
+          },
+          {
+            "id": "150206",
+            "text": "150206 – Income distribution",
+            "children": []
+          },
+          {
+            "id": "150207",
+            "text": "150207 – Macro labour market issues",
+            "children": []
+          },
+          {
+            "id": "150208",
+            "text": "150208 – Monetary policy",
+            "children": []
+          },
+          {
+            "id": "150209",
+            "text": "150209 – Savings and investments",
+            "children": []
+          },
+          {
+            "id": "150210",
+            "text": "150210 – Taxation",
+            "children": []
+          },
+          {
+            "id": "150299",
+            "text": "150299 – Macroeconomics not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1503",
+        "text": "1503 – Management and productivity ",
+        "children": [
+          {
+            "id": "150301",
+            "text": "150301 – Industrial relations",
+            "children": []
+          },
+          {
+            "id": "150302",
+            "text": "150302 – Management",
+            "children": []
+          },
+          {
+            "id": "150303",
+            "text": "150303 – Marketing",
+            "children": []
+          },
+          {
+            "id": "150304",
+            "text": "150304 – Productivity (excl. public sector)",
+            "children": []
+          },
+          {
+            "id": "150305",
+            "text": "150305 – Public sector productivity",
+            "children": []
+          },
+          {
+            "id": "150306",
+            "text": "150306 – Technological and organisational innovation",
+            "children": []
+          },
+          {
+            "id": "150399",
+            "text": "150399 – Management and productivity not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1504",
+        "text": "1504 – Measurement standards and calibration services",
+        "children": [
+          {
+            "id": "150401",
+            "text": "150401 – Agricultural and environmental standards and calibrations",
+            "children": []
+          },
+          {
+            "id": "150402",
+            "text": "150402 – Defence standards and calibrations",
+            "children": []
+          },
+          {
+            "id": "150403",
+            "text": "150403 – Manufacturing standards and calibrations",
+            "children": []
+          },
+          {
+            "id": "150404",
+            "text": "150404 – Service industries standards and calibrations",
+            "children": []
+          },
+          {
+            "id": "150499",
+            "text": "150499 – Measurement standards and calibration services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1505",
+        "text": "1505 – Microeconomics",
+        "children": [
+          {
+            "id": "150501",
+            "text": "150501 – Consumption",
+            "children": []
+          },
+          {
+            "id": "150502",
+            "text": "150502 – Human capital issues",
+            "children": []
+          },
+          {
+            "id": "150503",
+            "text": "150503 – Industrial organisations",
+            "children": []
+          },
+          {
+            "id": "150504",
+            "text": "150504 – Industry costs and structure",
+            "children": []
+          },
+          {
+            "id": "150505",
+            "text": "150505 – Industry policy",
+            "children": []
+          },
+          {
+            "id": "150506",
+            "text": "150506 – Market-based mechanisms",
+            "children": []
+          },
+          {
+            "id": "150507",
+            "text": "150507 – Micro labour market issues",
+            "children": []
+          },
+          {
+            "id": "150508",
+            "text": "150508 – Microeconomic effects of taxation",
+            "children": []
+          },
+          {
+            "id": "150509",
+            "text": "150509 – Preference, behaviour and welfare",
+            "children": []
+          },
+          {
+            "id": "150510",
+            "text": "150510 – Production",
+            "children": []
+          },
+          {
+            "id": "150511",
+            "text": "150511 – Supply and demand",
+            "children": []
+          },
+          {
+            "id": "150599",
+            "text": "150599 – Microeconomics not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1599",
+        "text": "1599 – Other economic framework",
+        "children": [
+          {
+            "id": "159901",
+            "text": "159901 – Carbon and emissions trading",
+            "children": []
+          },
+          {
+            "id": "159902",
+            "text": "159902 – Ecological economics",
+            "children": []
+          },
+          {
+            "id": "159999",
+            "text": "159999 – Other economic framework not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "text": "16 – EDUCATION AND TRAINING",
+    "children": [
+      {
+        "id": "1601",
+        "text": "1601 – Learner and learning",
+        "children": [
+          {
+            "id": "160101",
+            "text": "160101 – Early childhood education",
+            "children": []
+          },
+          {
+            "id": "160102",
+            "text": "160102 – Higher education",
+            "children": []
+          },
+          {
+            "id": "160103",
+            "text": "160103 – Primary education",
+            "children": []
+          },
+          {
+            "id": "160104",
+            "text": "160104 – Professional development and adult education",
+            "children": []
+          },
+          {
+            "id": "160105",
+            "text": "160105 – Secondary education",
+            "children": []
+          },
+          {
+            "id": "160199",
+            "text": "160199 – Learner and learning not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1602",
+        "text": "1602 – Schools and learning environments",
+        "children": [
+          {
+            "id": "160201",
+            "text": "160201 – Equity and access to education",
+            "children": []
+          },
+          {
+            "id": "160202",
+            "text": "160202 – Gender aspects in education",
+            "children": []
+          },
+          {
+            "id": "160203",
+            "text": "160203 – Inclusive education",
+            "children": []
+          },
+          {
+            "id": "160204",
+            "text": "160204 – Management, resources and leadership",
+            "children": []
+          },
+          {
+            "id": "160205",
+            "text": "160205 – Policies and development",
+            "children": []
+          },
+          {
+            "id": "160206",
+            "text": "160206 – Workforce transition and employment",
+            "children": []
+          },
+          {
+            "id": "160299",
+            "text": "160299 – Schools and learning environments not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1603",
+        "text": "1603 – Teaching and curriculum",
+        "children": [
+          {
+            "id": "160301",
+            "text": "160301 – Assessment, development and evaluation of curriculum",
+            "children": []
+          },
+          {
+            "id": "160302",
+            "text": "160302 – Pedagogy",
+            "children": []
+          },
+          {
+            "id": "160303",
+            "text": "160303 – Teacher and instructor development",
+            "children": []
+          },
+          {
+            "id": "160304",
+            "text": "160304 – Teaching and instruction technologies",
+            "children": []
+          },
+          {
+            "id": "160399",
+            "text": "160399 – Teaching and curriculum not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1699",
+        "text": "1699 – Other education and training",
+        "children": [
+          {
+            "id": "169999",
+            "text": "169999 – Other education and training not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "text": "17 – ENERGY",
+    "children": [
+      {
+        "id": "1701",
+        "text": "1701 – Energy efficiency",
+        "children": [
+          {
+            "id": "170101",
+            "text": "170101 – Commercial energy efficiency",
+            "children": []
+          },
+          {
+            "id": "170102",
+            "text": "170102 – Industrial energy efficiency",
+            "children": []
+          },
+          {
+            "id": "170103",
+            "text": "170103 – Residential energy efficiency",
+            "children": []
+          },
+          {
+            "id": "170104",
+            "text": "170104 – Transport energy efficiency",
+            "children": []
+          },
+          {
+            "id": "170199",
+            "text": "170199 – Energy efficiency not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1702",
+        "text": "1702 – Energy exploration",
+        "children": [
+          {
+            "id": "170201",
+            "text": "170201 – Coal exploration",
+            "children": []
+          },
+          {
+            "id": "170202",
+            "text": "170202 – Geothermal exploration",
+            "children": []
+          },
+          {
+            "id": "170203",
+            "text": "170203 – Oil and gas exploration",
+            "children": []
+          },
+          {
+            "id": "170204",
+            "text": "170204 – Oil shale and tar sands exploration",
+            "children": []
+          },
+          {
+            "id": "170205",
+            "text": "170205 – Uranium exploration",
+            "children": []
+          },
+          {
+            "id": "170299",
+            "text": "170299 – Energy exploration not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1703",
+        "text": "1703 – Energy storage, distribution and supply",
+        "children": [
+          {
+            "id": "170301",
+            "text": "170301 – Battery storage",
+            "children": []
+          },
+          {
+            "id": "170302",
+            "text": "170302 – Carbon capture and storage",
+            "children": []
+          },
+          {
+            "id": "170303",
+            "text": "170303 – Energy services and utilities",
+            "children": []
+          },
+          {
+            "id": "170304",
+            "text": "170304 – Energy storage (excl. hydrogen and batteries)",
+            "children": []
+          },
+          {
+            "id": "170305",
+            "text": "170305 – Energy systems and analysis",
+            "children": []
+          },
+          {
+            "id": "170306",
+            "text": "170306 – Energy transmission and distribution (excl. hydrogen)",
+            "children": []
+          },
+          {
+            "id": "170307",
+            "text": "170307 – Hydrogen distribution",
+            "children": []
+          },
+          {
+            "id": "170308",
+            "text": "170308 – Hydrogen storage",
+            "children": []
+          },
+          {
+            "id": "170309",
+            "text": "170309 – Smart grids",
+            "children": []
+          },
+          {
+            "id": "170399",
+            "text": "170399 – Energy storage, distribution and supply not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1704",
+        "text": "1704 – Energy transformation",
+        "children": [
+          {
+            "id": "170401",
+            "text": "170401 – Fuel cells (excl. solid oxide)",
+            "children": []
+          },
+          {
+            "id": "170402",
+            "text": "170402 – Hydrogen-based energy systems",
+            "children": []
+          },
+          {
+            "id": "170403",
+            "text": "170403 – Nuclear energy",
+            "children": []
+          },
+          {
+            "id": "170404",
+            "text": "170404 – Solid oxide fuel cells",
+            "children": []
+          },
+          {
+            "id": "170405",
+            "text": "170405 – Transformation of coal into electricity",
+            "children": []
+          },
+          {
+            "id": "170406",
+            "text": "170406 – Transformation of coal into fuels",
+            "children": []
+          },
+          {
+            "id": "170407",
+            "text": "170407 – Transformation of electricity and material feedstocks into fuels",
+            "children": []
+          },
+          {
+            "id": "170408",
+            "text": "170408 – Transformation of gas into electricity",
+            "children": []
+          },
+          {
+            "id": "170409",
+            "text": "170409 – Transformation of gas into fuels",
+            "children": []
+          },
+          {
+            "id": "170499",
+            "text": "170499 – Energy transformation not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1705",
+        "text": "1705 – Environmentally sustainable energy activities",
+        "children": [
+          {
+            "id": "170501",
+            "text": "170501 – Management of gaseous waste from energy activities (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "170502",
+            "text": "170502 – Management of liquid waste from energy activities (excl. water)",
+            "children": []
+          },
+          {
+            "id": "170503",
+            "text": "170503 – Management of solid waste from energy activities",
+            "children": []
+          },
+          {
+            "id": "170504",
+            "text": "170504 – Management of water consumption by energy activities",
+            "children": []
+          },
+          {
+            "id": "170599",
+            "text": "170599 – Environmentally sustainable energy activities not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1706",
+        "text": "1706 – Mining and extraction of energy resources",
+        "children": [
+          {
+            "id": "170601",
+            "text": "170601 – Coal mining and extraction",
+            "children": []
+          },
+          {
+            "id": "170602",
+            "text": "170602 – Geothermal energy extraction",
+            "children": []
+          },
+          {
+            "id": "170603",
+            "text": "170603 – Oil and gas extraction",
+            "children": []
+          },
+          {
+            "id": "170604",
+            "text": "170604 – Oil shale and tar sands mining and extraction",
+            "children": []
+          },
+          {
+            "id": "170605",
+            "text": "170605 – Uranium mining and extraction",
+            "children": []
+          },
+          {
+            "id": "170699",
+            "text": "170699 – Mining and extraction of energy resources not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1707",
+        "text": "1707 – Processing of energy sources",
+        "children": [
+          {
+            "id": "170701",
+            "text": "170701 – Biomass processing",
+            "children": []
+          },
+          {
+            "id": "170702",
+            "text": "170702 – Hydrogen production from fossil fuels",
+            "children": []
+          },
+          {
+            "id": "170703",
+            "text": "170703 – Hydrogen production from nuclear energy",
+            "children": []
+          },
+          {
+            "id": "170704",
+            "text": "170704 – Hydrogen production from renewable energy",
+            "children": []
+          },
+          {
+            "id": "170705",
+            "text": "170705 – Oil and gas processing",
+            "children": []
+          },
+          {
+            "id": "170706",
+            "text": "170706 – Preparation of black coal",
+            "children": []
+          },
+          {
+            "id": "170707",
+            "text": "170707 – Preparation of brown coal (lignite)",
+            "children": []
+          },
+          {
+            "id": "170708",
+            "text": "170708 – Preparation of oil shale and tar sands",
+            "children": []
+          },
+          {
+            "id": "170709",
+            "text": "170709 – Preparation of uranium",
+            "children": []
+          },
+          {
+            "id": "170799",
+            "text": "170799 – Processing of energy sources not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1708",
+        "text": "1708 – Renewable energy",
+        "children": [
+          {
+            "id": "170801",
+            "text": "170801 – Biofuel energy",
+            "children": []
+          },
+          {
+            "id": "170802",
+            "text": "170802 – Geothermal energy",
+            "children": []
+          },
+          {
+            "id": "170803",
+            "text": "170803 – Hydro-electric energy",
+            "children": []
+          },
+          {
+            "id": "170804",
+            "text": "170804 – Solar-photovoltaic energy",
+            "children": []
+          },
+          {
+            "id": "170805",
+            "text": "170805 – Solar-thermal energy",
+            "children": []
+          },
+          {
+            "id": "170806",
+            "text": "170806 – Tidal energy",
+            "children": []
+          },
+          {
+            "id": "170807",
+            "text": "170807 – Wave energy",
+            "children": []
+          },
+          {
+            "id": "170808",
+            "text": "170808 – Wind energy",
+            "children": []
+          },
+          {
+            "id": "170899",
+            "text": "170899 – Renewable energy not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1799",
+        "text": "1799 – Other energy",
+        "children": [
+          {
+            "id": "179999",
+            "text": "179999 – Other energy not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "text": "18 – ENVIRONMENTAL MANAGEMENT",
+    "children": [
+      {
+        "id": "1801",
+        "text": "1801 – Air quality, atmosphere and weather",
+        "children": [
+          {
+            "id": "180101",
+            "text": "180101 – Air quality",
+            "children": []
+          },
+          {
+            "id": "180102",
+            "text": "180102 – Atmospheric composition (incl. greenhouse gas inventory)",
+            "children": []
+          },
+          {
+            "id": "180103",
+            "text": "180103 – Atmospheric processes and dynamics",
+            "children": []
+          },
+          {
+            "id": "180104",
+            "text": "180104 – Weather",
+            "children": []
+          },
+          {
+            "id": "180199",
+            "text": "180199 – Air quality, atmosphere and weather not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1802",
+        "text": "1802 – Coastal and estuarine systems and management",
+        "children": [
+          {
+            "id": "180201",
+            "text": "180201 – Assessment and management of coastal and estuarine ecosystems",
+            "children": []
+          },
+          {
+            "id": "180202",
+            "text": "180202 – Coastal erosion",
+            "children": []
+          },
+          {
+            "id": "180203",
+            "text": "180203 – Coastal or estuarine biodiversity",
+            "children": []
+          },
+          {
+            "id": "180204",
+            "text": "180204 – Control of pests, diseases and exotic species in coastal and estuarine environments ",
+            "children": []
+          },
+          {
+            "id": "180205",
+            "text": "180205 – Measurement and assessment of estuarine water quality ",
+            "children": []
+          },
+          {
+            "id": "180206",
+            "text": "180206 – Rehabilitation or conservation of coastal or estuarine environments",
+            "children": []
+          },
+          {
+            "id": "180299",
+            "text": "180299 – Coastal and estuarine systems and management not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1803",
+        "text": "1803 – Fresh, ground and surface water systems and management",
+        "children": [
+          {
+            "id": "180301",
+            "text": "180301 – Assessment and management of freshwater ecosystems",
+            "children": []
+          },
+          {
+            "id": "180302",
+            "text": "180302 – Control of pests, diseases and exotic species in fresh, ground and surface water ",
+            "children": []
+          },
+          {
+            "id": "180303",
+            "text": "180303 – Fresh, ground and surface water biodiversity",
+            "children": []
+          },
+          {
+            "id": "180304",
+            "text": "180304 – Freshwater assimilative capacity",
+            "children": []
+          },
+          {
+            "id": "180305",
+            "text": "180305 – Ground water quantification, allocation and impact of depletion ",
+            "children": []
+          },
+          {
+            "id": "180306",
+            "text": "180306 – Measurement and assessment of freshwater quality (incl. physical and chemical conditions of water) ",
+            "children": []
+          },
+          {
+            "id": "180307",
+            "text": "180307 – Rehabilitation or conservation of fresh, ground and surface water environments",
+            "children": []
+          },
+          {
+            "id": "180308",
+            "text": "180308 – Surface water quantification, allocation and impact of depletion",
+            "children": []
+          },
+          {
+            "id": "180399",
+            "text": "180399 – Fresh, ground and surface water systems and management not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1804",
+        "text": "1804 – Management of Antarctic and Southern Ocean environments",
+        "children": [
+          {
+            "id": "180401",
+            "text": "180401 – Antarctic and Southern Ocean ice dynamics",
+            "children": []
+          },
+          {
+            "id": "180402",
+            "text": "180402 – Antarctic and Southern Ocean oceanic processes",
+            "children": []
+          },
+          {
+            "id": "180403",
+            "text": "180403 – Assessment and management of Antarctic and Southern Ocean ecosystems",
+            "children": []
+          },
+          {
+            "id": "180404",
+            "text": "180404 – Biodiversity in Antarctic and Southern Ocean environments",
+            "children": []
+          },
+          {
+            "id": "180405",
+            "text": "180405 – Control of pests, diseases and exotic species in Antarctic and Southern Ocean environments",
+            "children": []
+          },
+          {
+            "id": "180406",
+            "text": "180406 – Protection and conservation of Antarctic and Southern Ocean environments",
+            "children": []
+          },
+          {
+            "id": "180407",
+            "text": "180407 – Water quality in Antarctic and Southern Ocean environments",
+            "children": []
+          },
+          {
+            "id": "180499",
+            "text": "180499 – Management of Antarctic and Southern Ocean environments not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1805",
+        "text": "1805 – Marine systems and management",
+        "children": [
+          {
+            "id": "180501",
+            "text": "180501 – Assessment and management of benthic marine ecosystems",
+            "children": []
+          },
+          {
+            "id": "180502",
+            "text": "180502 – Assessment and management of pelagic marine ecosystems",
+            "children": []
+          },
+          {
+            "id": "180503",
+            "text": "180503 – Control of pests, diseases and exotic species in marine environments ",
+            "children": []
+          },
+          {
+            "id": "180504",
+            "text": "180504 – Marine biodiversity",
+            "children": []
+          },
+          {
+            "id": "180505",
+            "text": "180505 – Measurement and assessment of marine water quality and condition",
+            "children": []
+          },
+          {
+            "id": "180506",
+            "text": "180506 – Oceanic processes (excl. in the Antarctic and Southern Ocean)",
+            "children": []
+          },
+          {
+            "id": "180507",
+            "text": "180507 – Rehabilitation or conservation of marine environments",
+            "children": []
+          },
+          {
+            "id": "180599",
+            "text": "180599 – Marine systems and management not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1806",
+        "text": "1806 – Terrestrial systems and management",
+        "children": [
+          {
+            "id": "180601",
+            "text": "180601 – Assessment and management of terrestrial ecosystems",
+            "children": []
+          },
+          {
+            "id": "180602",
+            "text": "180602 – Control of pests, diseases and exotic species in terrestrial environments ",
+            "children": []
+          },
+          {
+            "id": "180603",
+            "text": "180603 – Evaluation, allocation, and impacts of land use ",
+            "children": []
+          },
+          {
+            "id": "180604",
+            "text": "180604 – Rehabilitation or conservation of terrestrial environments",
+            "children": []
+          },
+          {
+            "id": "180605",
+            "text": "180605 – Soils",
+            "children": []
+          },
+          {
+            "id": "180606",
+            "text": "180606 – Terrestrial biodiversity",
+            "children": []
+          },
+          {
+            "id": "180607",
+            "text": "180607 – Terrestrial erosion ",
+            "children": []
+          },
+          {
+            "id": "180699",
+            "text": "180699 – Terrestrial systems and management not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1899",
+        "text": "1899 – Other environmental management ",
+        "children": [
+          {
+            "id": "189999",
+            "text": "189999 – Other environmental management not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "text": "19 – ENVIRONMENTAL POLICY, CLIMATE CHANGE AND NATURAL HAZARDS",
+    "children": [
+      {
+        "id": "1901",
+        "text": "1901 – Adaptation to climate change",
+        "children": [
+          {
+            "id": "190101",
+            "text": "190101 – Climate change adaptation measures (excl. ecosystem)",
+            "children": []
+          },
+          {
+            "id": "190102",
+            "text": "190102 – Ecosystem adaptation to climate change",
+            "children": []
+          },
+          {
+            "id": "190103",
+            "text": "190103 – Social impacts of climate change and variability ",
+            "children": []
+          },
+          {
+            "id": "190199",
+            "text": "190199 – Adaptation to climate change not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1902",
+        "text": "1902 – Environmental policy, legislation and standards",
+        "children": [
+          {
+            "id": "190201",
+            "text": "190201 – Consumption patterns, population issues and the environment",
+            "children": []
+          },
+          {
+            "id": "190202",
+            "text": "190202 – Eco-verification (excl. environmental lifecycle assessment)",
+            "children": []
+          },
+          {
+            "id": "190203",
+            "text": "190203 – Environmental education and awareness",
+            "children": []
+          },
+          {
+            "id": "190204",
+            "text": "190204 – Environmental lifecycle assessment",
+            "children": []
+          },
+          {
+            "id": "190205",
+            "text": "190205 – Environmental protection frameworks (incl. economic incentives)",
+            "children": []
+          },
+          {
+            "id": "190206",
+            "text": "190206 – Institutional arrangements",
+            "children": []
+          },
+          {
+            "id": "190207",
+            "text": "190207 – Land policy",
+            "children": []
+          },
+          {
+            "id": "190208",
+            "text": "190208 – Rights to environmental and natural resources (excl. water allocation)",
+            "children": []
+          },
+          {
+            "id": "190209",
+            "text": "190209 – Sustainability indicators",
+            "children": []
+          },
+          {
+            "id": "190210",
+            "text": "190210 – Trade and environment ",
+            "children": []
+          },
+          {
+            "id": "190211",
+            "text": "190211 – Water policy (incl. water allocation)",
+            "children": []
+          },
+          {
+            "id": "190299",
+            "text": "190299 – Environmental policy, legislation and standards not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1903",
+        "text": "1903 – Mitigation of climate change",
+        "children": [
+          {
+            "id": "190301",
+            "text": "190301 – Climate change mitigation strategies",
+            "children": []
+          },
+          {
+            "id": "190302",
+            "text": "190302 – Management of greenhouse gas emissions from animal production",
+            "children": []
+          },
+          {
+            "id": "190303",
+            "text": "190303 – Management of greenhouse gas emissions from commercial services and tourism",
+            "children": []
+          },
+          {
+            "id": "190304",
+            "text": "190304 – Management of greenhouse gas emissions from construction activities",
+            "children": []
+          },
+          {
+            "id": "190305",
+            "text": "190305 – Management of greenhouse gas emissions from electricity generation",
+            "children": []
+          },
+          {
+            "id": "190306",
+            "text": "190306 – Management of greenhouse gas emissions from energy activities",
+            "children": []
+          },
+          {
+            "id": "190307",
+            "text": "190307 – Management of greenhouse gas emissions from information and communication services",
+            "children": []
+          },
+          {
+            "id": "190308",
+            "text": "190308 – Management of greenhouse gas emissions from manufacturing activities",
+            "children": []
+          },
+          {
+            "id": "190309",
+            "text": "190309 – Management of greenhouse gas emissions from mineral resources activities",
+            "children": []
+          },
+          {
+            "id": "190310",
+            "text": "190310 – Management of greenhouse gas emissions from plant production",
+            "children": []
+          },
+          {
+            "id": "190311",
+            "text": "190311 – Management of greenhouse gas emissions from transport activities",
+            "children": []
+          },
+          {
+            "id": "190399",
+            "text": "190399 – Mitigation of climate change not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1904",
+        "text": "1904 – Natural hazards",
+        "children": [
+          {
+            "id": "190401",
+            "text": "190401 – Climatological hazards (e.g. extreme temperatures, drought and wildfires)",
+            "children": []
+          },
+          {
+            "id": "190402",
+            "text": "190402 – Extraterrestrial hazards (e.g. meteorites)",
+            "children": []
+          },
+          {
+            "id": "190403",
+            "text": "190403 – Geological hazards (e.g. earthquakes, landslides and volcanic activity)",
+            "children": []
+          },
+          {
+            "id": "190404",
+            "text": "190404 – Hydrological hazards (e.g. avalanches and floods)",
+            "children": []
+          },
+          {
+            "id": "190405",
+            "text": "190405 – Meteorological hazards (e.g. cyclones and storms)",
+            "children": []
+          },
+          {
+            "id": "190499",
+            "text": "190499 – Natural hazards not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1905",
+        "text": "1905 – Understanding climate change",
+        "children": [
+          {
+            "id": "190501",
+            "text": "190501 – Climate change models",
+            "children": []
+          },
+          {
+            "id": "190502",
+            "text": "190502 – Climate variability (excl. social impacts)",
+            "children": []
+          },
+          {
+            "id": "190503",
+            "text": "190503 – Effects of climate change on Antarctic and sub-Antarctic environments (excl. social impacts)",
+            "children": []
+          },
+          {
+            "id": "190504",
+            "text": "190504 – Effects of climate change on Australia (excl. social impacts)",
+            "children": []
+          },
+          {
+            "id": "190505",
+            "text": "190505 – Effects of climate change on New Zealand (excl. social impacts) ",
+            "children": []
+          },
+          {
+            "id": "190506",
+            "text": "190506 – Effects of climate change on the South Pacific (excl. Australia and New Zealand) (excl. social impacts)",
+            "children": []
+          },
+          {
+            "id": "190507",
+            "text": "190507 – Global effects of climate change (excl. Australia, New Zealand, Antarctica and the South Pacific) (excl. social impacts)",
+            "children": []
+          },
+          {
+            "id": "190508",
+            "text": "190508 – Understanding the impact of natural hazards caused by climate change",
+            "children": []
+          },
+          {
+            "id": "190599",
+            "text": "190599 – Understanding climate change not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "1999",
+        "text": "1999 – Other environmental policy, climate change and natural hazards",
+        "children": [
+          {
+            "id": "199999",
+            "text": "199999 – Other environmental policy, climate change and natural hazards not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "text": "20 – HEALTH",
+    "children": [
+      {
+        "id": "2001",
+        "text": "2001 – Clinical health",
+        "children": [
+          {
+            "id": "200101",
+            "text": "200101 – Diagnosis of human diseases and conditions",
+            "children": []
+          },
+          {
+            "id": "200102",
+            "text": "200102 – Efficacy of medications",
+            "children": []
+          },
+          {
+            "id": "200103",
+            "text": "200103 – Human pain management",
+            "children": []
+          },
+          {
+            "id": "200104",
+            "text": "200104 – Prevention of human diseases and conditions",
+            "children": []
+          },
+          {
+            "id": "200105",
+            "text": "200105 – Treatment of human diseases and conditions",
+            "children": []
+          },
+          {
+            "id": "200199",
+            "text": "200199 – Clinical health not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2002",
+        "text": "2002 – Evaluation of health and support services",
+        "children": [
+          {
+            "id": "200201",
+            "text": "200201 – Determinants of health",
+            "children": []
+          },
+          {
+            "id": "200202",
+            "text": "200202 – Evaluation of health outcomes",
+            "children": []
+          },
+          {
+            "id": "200203",
+            "text": "200203 – Health education and promotion",
+            "children": []
+          },
+          {
+            "id": "200204",
+            "text": "200204 – Health inequalities",
+            "children": []
+          },
+          {
+            "id": "200205",
+            "text": "200205 – Health policy evaluation",
+            "children": []
+          },
+          {
+            "id": "200206",
+            "text": "200206 – Health system performance (incl. effectiveness of programs)",
+            "children": []
+          },
+          {
+            "id": "200207",
+            "text": "200207 – Social structure and health",
+            "children": []
+          },
+          {
+            "id": "200208",
+            "text": "200208 – Telehealth",
+            "children": []
+          },
+          {
+            "id": "200299",
+            "text": "200299 – Evaluation of health and support services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2003",
+        "text": "2003 – Provision of health and support services",
+        "children": [
+          {
+            "id": "200301",
+            "text": "200301 – Allied health therapies (excl. mental health services)",
+            "children": []
+          },
+          {
+            "id": "200302",
+            "text": "200302 – Community health care",
+            "children": []
+          },
+          {
+            "id": "200303",
+            "text": "200303 – Health surveillance",
+            "children": []
+          },
+          {
+            "id": "200304",
+            "text": "200304 – Inpatient hospital care",
+            "children": []
+          },
+          {
+            "id": "200305",
+            "text": "200305 – Mental health services",
+            "children": []
+          },
+          {
+            "id": "200306",
+            "text": "200306 – Midwifery",
+            "children": []
+          },
+          {
+            "id": "200307",
+            "text": "200307 – Nursing",
+            "children": []
+          },
+          {
+            "id": "200308",
+            "text": "200308 – Outpatient care",
+            "children": []
+          },
+          {
+            "id": "200309",
+            "text": "200309 – Palliative care",
+            "children": []
+          },
+          {
+            "id": "200310",
+            "text": "200310 – Primary care",
+            "children": []
+          },
+          {
+            "id": "200311",
+            "text": "200311 – Urgent and critical care, and emergency medicine",
+            "children": []
+          },
+          {
+            "id": "200399",
+            "text": "200399 – Provision of health and support services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2004",
+        "text": "2004 – Public health (excl. specific population health)",
+        "children": [
+          {
+            "id": "200401",
+            "text": "200401 – Behaviour and health",
+            "children": []
+          },
+          {
+            "id": "200402",
+            "text": "200402 – Dental health",
+            "children": []
+          },
+          {
+            "id": "200403",
+            "text": "200403 – Disability and functional capacity",
+            "children": []
+          },
+          {
+            "id": "200404",
+            "text": "200404 – Disease distribution and transmission (incl. surveillance and response)",
+            "children": []
+          },
+          {
+            "id": "200405",
+            "text": "200405 – Food safety",
+            "children": []
+          },
+          {
+            "id": "200406",
+            "text": "200406 – Health protection and disaster response",
+            "children": []
+          },
+          {
+            "id": "200407",
+            "text": "200407 – Health status (incl. wellbeing)",
+            "children": []
+          },
+          {
+            "id": "200408",
+            "text": "200408 – Injury prevention and control",
+            "children": []
+          },
+          {
+            "id": "200409",
+            "text": "200409 – Mental health",
+            "children": []
+          },
+          {
+            "id": "200410",
+            "text": "200410 – Nutrition",
+            "children": []
+          },
+          {
+            "id": "200411",
+            "text": "200411 – Overweight and obesity",
+            "children": []
+          },
+          {
+            "id": "200412",
+            "text": "200412 – Preventive medicine ",
+            "children": []
+          },
+          {
+            "id": "200413",
+            "text": "200413 – Substance abuse",
+            "children": []
+          },
+          {
+            "id": "200499",
+            "text": "200499 – Public health (excl. specific population health) not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2005",
+        "text": "2005 – Specific population health (excl. Indigenous health)",
+        "children": [
+          {
+            "id": "200501",
+            "text": "200501 – Adolescent health",
+            "children": []
+          },
+          {
+            "id": "200502",
+            "text": "200502 – Health related to ageing",
+            "children": []
+          },
+          {
+            "id": "200503",
+            "text": "200503 – Health related to specific ethnic groups",
+            "children": []
+          },
+          {
+            "id": "200504",
+            "text": "200504 – Men's health",
+            "children": []
+          },
+          {
+            "id": "200505",
+            "text": "200505 – Migrant health",
+            "children": []
+          },
+          {
+            "id": "200506",
+            "text": "200506 – Neonatal and child health",
+            "children": []
+          },
+          {
+            "id": "200507",
+            "text": "200507 – Occupational health",
+            "children": []
+          },
+          {
+            "id": "200508",
+            "text": "200508 – Rural and remote area health",
+            "children": []
+          },
+          {
+            "id": "200509",
+            "text": "200509 – Women's and maternal health",
+            "children": []
+          },
+          {
+            "id": "200599",
+            "text": "200599 – Specific population health (excl. Indigenous health) not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2099",
+        "text": "2099 – Other health",
+        "children": [
+          {
+            "id": "209999",
+            "text": "209999 – Other health not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "text": "21 – INDIGENOUS",
+    "children": [
+      {
+        "id": "2101",
+        "text": "2101 – Aboriginal and Torres Strait Islander community services",
+        "children": [
+          {
+            "id": "210101",
+            "text": "210101 – Aboriginal and Torres Strait Islander community service programs",
+            "children": []
+          },
+          {
+            "id": "210102",
+            "text": "210102 – Aboriginal and Torres Strait Islander development and wellbeing",
+            "children": []
+          },
+          {
+            "id": "210199",
+            "text": "210199 – Aboriginal and Torres Strait Islander community services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2102",
+        "text": "2102 – Aboriginal and Torres Strait Islander education",
+        "children": [
+          {
+            "id": "210201",
+            "text": "210201 – Aboriginal and Torres Strait Islander education engagement and attendance outcomes",
+            "children": []
+          },
+          {
+            "id": "210202",
+            "text": "210202 – Aboriginal and Torres Strait Islander education system performance",
+            "children": []
+          },
+          {
+            "id": "210203",
+            "text": "210203 – Aboriginal and Torres Strait Islander literacy and numeracy outcomes",
+            "children": []
+          },
+          {
+            "id": "210299",
+            "text": "210299 – Aboriginal and Torres Strait Islander education not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2103",
+        "text": "2103 – Aboriginal and Torres Strait Islander health",
+        "children": [
+          {
+            "id": "210301",
+            "text": "210301 – Aboriginal and Torres Strait Islander determinants of health",
+            "children": []
+          },
+          {
+            "id": "210302",
+            "text": "210302 – Aboriginal and Torres Strait Islander health status and outcomes",
+            "children": []
+          },
+          {
+            "id": "210303",
+            "text": "210303 – Aboriginal and Torres Strait Islander health system performance",
+            "children": []
+          },
+          {
+            "id": "210399",
+            "text": "210399 – Aboriginal and Torres Strait Islander health not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2104",
+        "text": "2104 – Aboriginal and Torres Strait Islander heritage and culture",
+        "children": [
+          {
+            "id": "210401",
+            "text": "210401 – Aboriginal and Torres Strait Islander artefacts",
+            "children": []
+          },
+          {
+            "id": "210402",
+            "text": "210402 – Aboriginal and Torres Strait Islander connection to land and environment",
+            "children": []
+          },
+          {
+            "id": "210403",
+            "text": "210403 – Aboriginal and Torres Strait Islander customary practices",
+            "children": []
+          },
+          {
+            "id": "210404",
+            "text": "210404 – Aboriginal and Torres Strait Islander knowledge",
+            "children": []
+          },
+          {
+            "id": "210405",
+            "text": "210405 – Aboriginal and Torres Strait Islander places of significance",
+            "children": []
+          },
+          {
+            "id": "210406",
+            "text": "210406 – Aboriginal and Torres Strait Islander tradition",
+            "children": []
+          },
+          {
+            "id": "210407",
+            "text": "210407 – Conserving Aboriginal and Torres Strait Islander heritage and culture",
+            "children": []
+          },
+          {
+            "id": "210499",
+            "text": "210499 – Aboriginal and Torres Strait Islander heritage and culture not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2105",
+        "text": "2105 – Ngā ratonga hapori Māori (Māori community services)",
+        "children": [
+          {
+            "id": "210501",
+            "text": "210501 – Ngā hōtaka ratonga hapori Māori (Māori community service programs)",
+            "children": []
+          },
+          {
+            "id": "210502",
+            "text": "210502 – Te whanaketanga me te oranga o te Māori (Māori development and wellbeing)",
+            "children": []
+          },
+          {
+            "id": "210599",
+            "text": "210599 – Ngā ratonga hapori o te Māori kāore anō kia whakarōpūtia i wāhi kē (Māori community services not elsewhere classified)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2106",
+        "text": "2106 – Mātauranga Māori (Māori education)",
+        "children": [
+          {
+            "id": "210601",
+            "text": "210601 – Te whai wāhi o te Māori ki te mātauranga me te taetae atu ki te kura (Māori education engagement and attendance outcomes)",
+            "children": []
+          },
+          {
+            "id": "210602",
+            "text": "210602 – Te whakatutukitanga o te pūnaha mātauranga Māori (Māori education system performance)",
+            "children": []
+          },
+          {
+            "id": "210603",
+            "text": "210603 – Ngā putanga reo matatini me te pāngarau o te Māori (Māori literacy and numeracy outcomes)",
+            "children": []
+          },
+          {
+            "id": "210699",
+            "text": "210699 – Te mātauranga Māori kāore kāore anō kia whakarōpūtia i wāhi kē (Māori education not elsewhere classified)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2107",
+        "text": "2107 – Te hauora (hauora Māori) (Māori health) ",
+        "children": [
+          {
+            "id": "210701",
+            "text": "210701 – Ngā tokoingoa hauora (determinants of Māori health)",
+            "children": []
+          },
+          {
+            "id": "210702",
+            "text": "210702 – Te tūnga me ngā putanga hauora (Māori health status and outcomes)",
+            "children": []
+          },
+          {
+            "id": "210703",
+            "text": "210703 – Te whakatutukinga o te pūnaha hauora (Māori health system performance)",
+            "children": []
+          },
+          {
+            "id": "210799",
+            "text": "210799 – Te hauora kāore anō kia whakarōpūtia i wāhi kē (Māori health not elsewhere classified)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2108",
+        "text": "2108 – Te tuku ihotanga me te ahurea Māori (Māori heritage and culture)",
+        "children": [
+          {
+            "id": "210801",
+            "text": "210801 – Āhuatanga Māori (te tuku ihotanga Māori) (Māori tradition)",
+            "children": []
+          },
+          {
+            "id": "210802",
+            "text": "210802 – Te whāomoomo i te tuku ihotanga me te ahurea Māori (conserving Māori heritage and culture)",
+            "children": []
+          },
+          {
+            "id": "210803",
+            "text": "210803 – Mōhiotanga Māori (Māori knowledge)",
+            "children": []
+          },
+          {
+            "id": "210804",
+            "text": "210804 – Ngā taonga (Māori artefacts)",
+            "children": []
+          },
+          {
+            "id": "210805",
+            "text": "210805 – Ngā tikanga Māori (Māori customary practices) ",
+            "children": []
+          },
+          {
+            "id": "210806",
+            "text": "210806 – Ngā wāhi taonga (Māori places of significance)",
+            "children": []
+          },
+          {
+            "id": "210899",
+            "text": "210899 – Te tuku ihotanga me te ahurea Māori kāore anō kia whakarōpūhia i wāhi kē (Māori heritage and culture not elsewhere classified)",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2109",
+        "text": "2109 – Pacific Peoples community services",
+        "children": [
+          {
+            "id": "210901",
+            "text": "210901 – Pacific Peoples community service programs",
+            "children": []
+          },
+          {
+            "id": "210902",
+            "text": "210902 – Pacific Peoples development and wellbeing",
+            "children": []
+          },
+          {
+            "id": "210999",
+            "text": "210999 – Pacific Peoples community services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2110",
+        "text": "2110 – Pacific Peoples education",
+        "children": [
+          {
+            "id": "211001",
+            "text": "211001 – Pacific Peoples education engagement and attendance",
+            "children": []
+          },
+          {
+            "id": "211002",
+            "text": "211002 – Pacific Peoples education system performance",
+            "children": []
+          },
+          {
+            "id": "211003",
+            "text": "211003 – Pacific Peoples literacy and numeracy outcomes",
+            "children": []
+          },
+          {
+            "id": "211099",
+            "text": "211099 – Pacific Peoples education not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2111",
+        "text": "2111 – Pacific Peoples health",
+        "children": [
+          {
+            "id": "211101",
+            "text": "211101 – Pacific Peoples determinants of health",
+            "children": []
+          },
+          {
+            "id": "211102",
+            "text": "211102 – Pacific Peoples health status and outcomes",
+            "children": []
+          },
+          {
+            "id": "211103",
+            "text": "211103 – Pacific Peoples health system performance",
+            "children": []
+          },
+          {
+            "id": "211199",
+            "text": "211199 – Pacific Peoples health not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2112",
+        "text": "2112 – Pacific Peoples heritage and culture",
+        "children": [
+          {
+            "id": "211201",
+            "text": "211201 – Conserving Pacific Peoples heritage and culture",
+            "children": []
+          },
+          {
+            "id": "211202",
+            "text": "211202 – Pacific Peoples connection to land and environment",
+            "children": []
+          },
+          {
+            "id": "211299",
+            "text": "211299 – Pacific Peoples heritage and culture not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2199",
+        "text": "2199 – Other Indigenous",
+        "children": [
+          {
+            "id": "219999",
+            "text": "219999 – Other Indigenous not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "text": "22 – INFORMATION AND COMMUNICATION SERVICES",
+    "children": [
+      {
+        "id": "2201",
+        "text": "2201 – Communication technologies, systems and services",
+        "children": [
+          {
+            "id": "220101",
+            "text": "220101 – E-infrastructures",
+            "children": []
+          },
+          {
+            "id": "220102",
+            "text": "220102 – Internet protocols (ip)",
+            "children": []
+          },
+          {
+            "id": "220103",
+            "text": "220103 – Mobile technologies and communications",
+            "children": []
+          },
+          {
+            "id": "220104",
+            "text": "220104 – Network security",
+            "children": []
+          },
+          {
+            "id": "220105",
+            "text": "220105 – Network systems and services",
+            "children": []
+          },
+          {
+            "id": "220106",
+            "text": "220106 – Satellite technologies, networks and services",
+            "children": []
+          },
+          {
+            "id": "220107",
+            "text": "220107 – Wireless technologies, networks and services",
+            "children": []
+          },
+          {
+            "id": "220199",
+            "text": "220199 – Communication technologies, systems and services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2202",
+        "text": "2202 – Environmentally sustainable information and communication services",
+        "children": [
+          {
+            "id": "220201",
+            "text": "220201 – Management of solid waste from information and communication services",
+            "children": []
+          },
+          {
+            "id": "220202",
+            "text": "220202 – Management of water consumption by information and communication services",
+            "children": []
+          },
+          {
+            "id": "220299",
+            "text": "220299 – Environmentally sustainable information and communication services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2203",
+        "text": "2203 – Information services",
+        "children": [
+          {
+            "id": "220301",
+            "text": "220301 – Digital humanities",
+            "children": []
+          },
+          {
+            "id": "220302",
+            "text": "220302 – Electronic information storage and retrieval services",
+            "children": []
+          },
+          {
+            "id": "220303",
+            "text": "220303 – Library and archival services",
+            "children": []
+          },
+          {
+            "id": "220304",
+            "text": "220304 – Museum and gallery collections",
+            "children": []
+          },
+          {
+            "id": "220305",
+            "text": "220305 – News collection services",
+            "children": []
+          },
+          {
+            "id": "220306",
+            "text": "220306 – Open access",
+            "children": []
+          },
+          {
+            "id": "220399",
+            "text": "220399 – Information services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2204",
+        "text": "2204 – Information systems, technologies and services",
+        "children": [
+          {
+            "id": "220401",
+            "text": "220401 – Application software packages",
+            "children": []
+          },
+          {
+            "id": "220402",
+            "text": "220402 – Applied computing",
+            "children": []
+          },
+          {
+            "id": "220403",
+            "text": "220403 – Artificial intelligence",
+            "children": []
+          },
+          {
+            "id": "220404",
+            "text": "220404 – Computer systems",
+            "children": []
+          },
+          {
+            "id": "220405",
+            "text": "220405 – Cybersecurity",
+            "children": []
+          },
+          {
+            "id": "220406",
+            "text": "220406 – Graphics",
+            "children": []
+          },
+          {
+            "id": "220407",
+            "text": "220407 – Human-computer interaction",
+            "children": []
+          },
+          {
+            "id": "220408",
+            "text": "220408 – Information systems",
+            "children": []
+          },
+          {
+            "id": "220499",
+            "text": "220499 – Information systems, technologies and services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2205",
+        "text": "2205 – Media services",
+        "children": [
+          {
+            "id": "220501",
+            "text": "220501 – Animation, video games and computer generated imagery services",
+            "children": []
+          },
+          {
+            "id": "220502",
+            "text": "220502 – Internet, digital and social media",
+            "children": []
+          },
+          {
+            "id": "220503",
+            "text": "220503 – Publishing and print services",
+            "children": []
+          },
+          {
+            "id": "220504",
+            "text": "220504 – Radio, television, film and video services",
+            "children": []
+          },
+          {
+            "id": "220599",
+            "text": "220599 – Media services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2299",
+        "text": "2299 – Other information and communication services",
+        "children": [
+          {
+            "id": "229999",
+            "text": "229999 – Other information and communication services not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "text": "23 – LAW, POLITICS AND COMMUNITY SERVICES",
+    "children": [
+      {
+        "id": "2301",
+        "text": "2301 – Community services",
+        "children": [
+          {
+            "id": "230101",
+            "text": "230101 – Ability and disability",
+            "children": []
+          },
+          {
+            "id": "230102",
+            "text": "230102 – Ageing and older people",
+            "children": []
+          },
+          {
+            "id": "230103",
+            "text": "230103 – Carers' support",
+            "children": []
+          },
+          {
+            "id": "230104",
+            "text": "230104 – Children's services and childcare",
+            "children": []
+          },
+          {
+            "id": "230105",
+            "text": "230105 – Citizenship and national identity",
+            "children": []
+          },
+          {
+            "id": "230106",
+            "text": "230106 – Employment services",
+            "children": []
+          },
+          {
+            "id": "230107",
+            "text": "230107 – Families and family services",
+            "children": []
+          },
+          {
+            "id": "230108",
+            "text": "230108 – Gender and sexualities",
+            "children": []
+          },
+          {
+            "id": "230109",
+            "text": "230109 – Homelessness and housing services",
+            "children": []
+          },
+          {
+            "id": "230110",
+            "text": "230110 – Migrant and refugee settlement services",
+            "children": []
+          },
+          {
+            "id": "230111",
+            "text": "230111 – Multicultural services",
+            "children": []
+          },
+          {
+            "id": "230112",
+            "text": "230112 – Social class and inequalities",
+            "children": []
+          },
+          {
+            "id": "230113",
+            "text": "230113 – Structure, delivery and resourcing",
+            "children": []
+          },
+          {
+            "id": "230114",
+            "text": "230114 – Violence and abuse services",
+            "children": []
+          },
+          {
+            "id": "230115",
+            "text": "230115 – Youth services",
+            "children": []
+          },
+          {
+            "id": "230199",
+            "text": "230199 – Community services not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2302",
+        "text": "2302 – Government and politics",
+        "children": [
+          {
+            "id": "230201",
+            "text": "230201 – Civics and citizenship",
+            "children": []
+          },
+          {
+            "id": "230202",
+            "text": "230202 – Electoral systems",
+            "children": []
+          },
+          {
+            "id": "230203",
+            "text": "230203 – Political systems",
+            "children": []
+          },
+          {
+            "id": "230204",
+            "text": "230204 – Public services policy advice and analysis",
+            "children": []
+          },
+          {
+            "id": "230299",
+            "text": "230299 – Government and politics not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2303",
+        "text": "2303 – International relations",
+        "children": [
+          {
+            "id": "230301",
+            "text": "230301 – Defence and security policy",
+            "children": []
+          },
+          {
+            "id": "230302",
+            "text": "230302 – International aid and development",
+            "children": []
+          },
+          {
+            "id": "230303",
+            "text": "230303 – International organisations",
+            "children": []
+          },
+          {
+            "id": "230304",
+            "text": "230304 – International political economy (excl. international trade)",
+            "children": []
+          },
+          {
+            "id": "230305",
+            "text": "230305 – Peace and conflict",
+            "children": []
+          },
+          {
+            "id": "230399",
+            "text": "230399 – International relations not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2304",
+        "text": "2304 – Justice and the law",
+        "children": [
+          {
+            "id": "230401",
+            "text": "230401 – Civil justice",
+            "children": []
+          },
+          {
+            "id": "230402",
+            "text": "230402 – Crime prevention",
+            "children": []
+          },
+          {
+            "id": "230403",
+            "text": "230403 – Criminal justice",
+            "children": []
+          },
+          {
+            "id": "230404",
+            "text": "230404 – Law enforcement",
+            "children": []
+          },
+          {
+            "id": "230405",
+            "text": "230405 – Law reform",
+            "children": []
+          },
+          {
+            "id": "230406",
+            "text": "230406 – Legal processes",
+            "children": []
+          },
+          {
+            "id": "230407",
+            "text": "230407 – Legislation, civil and criminal codes",
+            "children": []
+          },
+          {
+            "id": "230408",
+            "text": "230408 – Rehabilitation and correctional services",
+            "children": []
+          },
+          {
+            "id": "230499",
+            "text": "230499 – Justice and the law not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2305",
+        "text": "2305 – Work and labour market",
+        "children": [
+          {
+            "id": "230501",
+            "text": "230501 – Employment patterns and change",
+            "children": []
+          },
+          {
+            "id": "230502",
+            "text": "230502 – Professions and professionalisation",
+            "children": []
+          },
+          {
+            "id": "230503",
+            "text": "230503 – Remuneration",
+            "children": []
+          },
+          {
+            "id": "230504",
+            "text": "230504 – Unpaid work and volunteering",
+            "children": []
+          },
+          {
+            "id": "230505",
+            "text": "230505 – Work and family responsibilities",
+            "children": []
+          },
+          {
+            "id": "230506",
+            "text": "230506 – Workplace safety",
+            "children": []
+          },
+          {
+            "id": "230599",
+            "text": "230599 – Work and labour market not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2399",
+        "text": "2399 – Other law, politics and community services",
+        "children": [
+          {
+            "id": "239999",
+            "text": "239999 – Other law, politics and community services not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "text": "24 – MANUFACTURING",
+    "children": [
+      {
+        "id": "2401",
+        "text": "2401 – Agricultural chemicals",
+        "children": [
+          {
+            "id": "240101",
+            "text": "240101 – Animal protection chemicals",
+            "children": []
+          },
+          {
+            "id": "240102",
+            "text": "240102 – Chemical fertilisers",
+            "children": []
+          },
+          {
+            "id": "240103",
+            "text": "240103 – Crop and pasture protection chemicals",
+            "children": []
+          },
+          {
+            "id": "240199",
+            "text": "240199 – Agricultural chemicals not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2402",
+        "text": "2402 – Basic metal products",
+        "children": [
+          {
+            "id": "240201",
+            "text": "240201 – Basic aluminium products",
+            "children": []
+          },
+          {
+            "id": "240202",
+            "text": "240202 – Basic copper products",
+            "children": []
+          },
+          {
+            "id": "240203",
+            "text": "240203 – Basic iron and steel products",
+            "children": []
+          },
+          {
+            "id": "240204",
+            "text": "240204 – Basic precious metal products",
+            "children": []
+          },
+          {
+            "id": "240205",
+            "text": "240205 – Basic zinc products",
+            "children": []
+          },
+          {
+            "id": "240299",
+            "text": "240299 – Basic metal products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2403",
+        "text": "2403 – Ceramics, glass and industrial mineral products",
+        "children": [
+          {
+            "id": "240301",
+            "text": "240301 – Cement products and concrete materials",
+            "children": []
+          },
+          {
+            "id": "240302",
+            "text": "240302 – Ceramics",
+            "children": []
+          },
+          {
+            "id": "240303",
+            "text": "240303 – Clay products",
+            "children": []
+          },
+          {
+            "id": "240304",
+            "text": "240304 – Composite materials",
+            "children": []
+          },
+          {
+            "id": "240305",
+            "text": "240305 – Plaster and plaster products",
+            "children": []
+          },
+          {
+            "id": "240306",
+            "text": "240306 – Structural glass and glass products",
+            "children": []
+          },
+          {
+            "id": "240399",
+            "text": "240399 – Ceramics, glass and industrial mineral products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2404",
+        "text": "2404 – Computer, electronic and communication equipment",
+        "children": [
+          {
+            "id": "240401",
+            "text": "240401 – Computer and electronic office equipment (excl. communication equipment)",
+            "children": []
+          },
+          {
+            "id": "240402",
+            "text": "240402 – Consumer electronic equipment (excl. communication equipment)",
+            "children": []
+          },
+          {
+            "id": "240403",
+            "text": "240403 – Integrated circuits and devices",
+            "children": []
+          },
+          {
+            "id": "240404",
+            "text": "240404 – Integrated systems",
+            "children": []
+          },
+          {
+            "id": "240405",
+            "text": "240405 – Network infrastructure equipment",
+            "children": []
+          },
+          {
+            "id": "240406",
+            "text": "240406 – Processor modules",
+            "children": []
+          },
+          {
+            "id": "240407",
+            "text": "240407 – Robotics",
+            "children": []
+          },
+          {
+            "id": "240408",
+            "text": "240408 – Satellite navigation equipment",
+            "children": []
+          },
+          {
+            "id": "240409",
+            "text": "240409 – Telemetry equipment",
+            "children": []
+          },
+          {
+            "id": "240410",
+            "text": "240410 – Voice and data equipment",
+            "children": []
+          },
+          {
+            "id": "240499",
+            "text": "240499 – Computer, electronic and communication equipment not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2405",
+        "text": "2405 – Dairy products",
+        "children": [
+          {
+            "id": "240501",
+            "text": "240501 – Butter and milk-derived fats and oils (excl. cream)",
+            "children": []
+          },
+          {
+            "id": "240502",
+            "text": "240502 – Casein",
+            "children": []
+          },
+          {
+            "id": "240503",
+            "text": "240503 – Cheese",
+            "children": []
+          },
+          {
+            "id": "240504",
+            "text": "240504 – Processed milk and cream (incl. powder, evaporated and condensed)",
+            "children": []
+          },
+          {
+            "id": "240505",
+            "text": "240505 – Whey",
+            "children": []
+          },
+          {
+            "id": "240599",
+            "text": "240599 – Dairy products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2406",
+        "text": "2406 – Environmentally sustainable manufacturing activities",
+        "children": [
+          {
+            "id": "240601",
+            "text": "240601 – Development of recyclable or biodegradable componentry, packaging or materials ",
+            "children": []
+          },
+          {
+            "id": "240602",
+            "text": "240602 – Management of gaseous waste from manufacturing activities (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "240603",
+            "text": "240603 – Management of liquid waste from manufacturing activities (excl. water)",
+            "children": []
+          },
+          {
+            "id": "240604",
+            "text": "240604 – Management of solid waste from manufacturing activities",
+            "children": []
+          },
+          {
+            "id": "240605",
+            "text": "240605 – Management of water consumption by manufacturing activities",
+            "children": []
+          },
+          {
+            "id": "240699",
+            "text": "240699 – Environmentally sustainable manufacturing activities not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2407",
+        "text": "2407 – Fabricated metal products",
+        "children": [
+          {
+            "id": "240701",
+            "text": "240701 – Coated metal and metal-coated products",
+            "children": []
+          },
+          {
+            "id": "240702",
+            "text": "240702 – Machined metal products",
+            "children": []
+          },
+          {
+            "id": "240703",
+            "text": "240703 – Metal castings",
+            "children": []
+          },
+          {
+            "id": "240704",
+            "text": "240704 – Semi-finished metal products",
+            "children": []
+          },
+          {
+            "id": "240705",
+            "text": "240705 – Sheet metal products",
+            "children": []
+          },
+          {
+            "id": "240706",
+            "text": "240706 – Structural metal products",
+            "children": []
+          },
+          {
+            "id": "240799",
+            "text": "240799 – Fabricated metal products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2408",
+        "text": "2408 – Human pharmaceutical products",
+        "children": [
+          {
+            "id": "240801",
+            "text": "240801 – Human biological preventatives ",
+            "children": []
+          },
+          {
+            "id": "240802",
+            "text": "240802 – Human diagnostics",
+            "children": []
+          },
+          {
+            "id": "240803",
+            "text": "240803 – Human pharmaceutical treatments ",
+            "children": []
+          },
+          {
+            "id": "240899",
+            "text": "240899 – Human pharmaceutical products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2409",
+        "text": "2409 – Industrial chemicals and related products",
+        "children": [
+          {
+            "id": "240901",
+            "text": "240901 – Antimicrobials, antifungals and biocides",
+            "children": []
+          },
+          {
+            "id": "240902",
+            "text": "240902 – Bioplastics",
+            "children": []
+          },
+          {
+            "id": "240903",
+            "text": "240903 – Cosmetics",
+            "children": []
+          },
+          {
+            "id": "240904",
+            "text": "240904 – Fine chemicals",
+            "children": []
+          },
+          {
+            "id": "240905",
+            "text": "240905 – Industrial gases",
+            "children": []
+          },
+          {
+            "id": "240906",
+            "text": "240906 – Inorganic industrial chemicals",
+            "children": []
+          },
+          {
+            "id": "240907",
+            "text": "240907 – Lubricants",
+            "children": []
+          },
+          {
+            "id": "240908",
+            "text": "240908 – Organic industrial chemicals (excl. resins, rubber and plastics)",
+            "children": []
+          },
+          {
+            "id": "240909",
+            "text": "240909 – Paints",
+            "children": []
+          },
+          {
+            "id": "240910",
+            "text": "240910 – Plastics",
+            "children": []
+          },
+          {
+            "id": "240911",
+            "text": "240911 – Resins",
+            "children": []
+          },
+          {
+            "id": "240912",
+            "text": "240912 – Rubber",
+            "children": []
+          },
+          {
+            "id": "240913",
+            "text": "240913 – Soaps",
+            "children": []
+          },
+          {
+            "id": "240999",
+            "text": "240999 – Industrial chemicals and related products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2410",
+        "text": "2410 – Instrumentation",
+        "children": [
+          {
+            "id": "241001",
+            "text": "241001 – Industrial instruments",
+            "children": []
+          },
+          {
+            "id": "241002",
+            "text": "241002 – Medical instruments",
+            "children": []
+          },
+          {
+            "id": "241003",
+            "text": "241003 – Scientific instruments",
+            "children": []
+          },
+          {
+            "id": "241099",
+            "text": "241099 – Instrumentation not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2411",
+        "text": "2411 – Leather products, fibre processing and textiles",
+        "children": [
+          {
+            "id": "241101",
+            "text": "241101 – Clothing",
+            "children": []
+          },
+          {
+            "id": "241102",
+            "text": "241102 – Cotton ginning",
+            "children": []
+          },
+          {
+            "id": "241103",
+            "text": "241103 – Natural fibres, yarns and fabrics",
+            "children": []
+          },
+          {
+            "id": "241104",
+            "text": "241104 – Non-fabric textiles (e.g. felt)",
+            "children": []
+          },
+          {
+            "id": "241105",
+            "text": "241105 – Skins, leather and leather products",
+            "children": []
+          },
+          {
+            "id": "241106",
+            "text": "241106 – Synthetic fibres, yarns and fabrics",
+            "children": []
+          },
+          {
+            "id": "241107",
+            "text": "241107 – Wool scouring and top making",
+            "children": []
+          },
+          {
+            "id": "241199",
+            "text": "241199 – Leather products, fibre processing and textiles not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2412",
+        "text": "2412 – Machinery and equipment",
+        "children": [
+          {
+            "id": "241201",
+            "text": "241201 – 3D printers and printing",
+            "children": []
+          },
+          {
+            "id": "241202",
+            "text": "241202 – Autonomous and robotic systems",
+            "children": []
+          },
+          {
+            "id": "241203",
+            "text": "241203 – Electrical machinery and equipment (incl. appliances)",
+            "children": []
+          },
+          {
+            "id": "241204",
+            "text": "241204 – Industrial machinery and equipment",
+            "children": []
+          },
+          {
+            "id": "241205",
+            "text": "241205 – Medical machinery and equipment ",
+            "children": []
+          },
+          {
+            "id": "241299",
+            "text": "241299 – Machinery and equipment not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2413",
+        "text": "2413 – Processed food products and beverages (excl. dairy products)",
+        "children": [
+          {
+            "id": "241301",
+            "text": "241301 – Alcoholic beverages",
+            "children": []
+          },
+          {
+            "id": "241302",
+            "text": "241302 – Bakery products",
+            "children": []
+          },
+          {
+            "id": "241303",
+            "text": "241303 – Carcass meat (incl. fish and seafood)",
+            "children": []
+          },
+          {
+            "id": "241304",
+            "text": "241304 – Flour mill and cereal food",
+            "children": []
+          },
+          {
+            "id": "241305",
+            "text": "241305 – Insects",
+            "children": []
+          },
+          {
+            "id": "241306",
+            "text": "241306 – Non-alcoholic beverages (excl. fruit juices and non-dairy milk)",
+            "children": []
+          },
+          {
+            "id": "241307",
+            "text": "241307 – Non-dairy milk",
+            "children": []
+          },
+          {
+            "id": "241308",
+            "text": "241308 – Nutraceuticals and functional foods",
+            "children": []
+          },
+          {
+            "id": "241309",
+            "text": "241309 – Oils and fats (incl. margarines)",
+            "children": []
+          },
+          {
+            "id": "241310",
+            "text": "241310 – Processed fish and seafood products",
+            "children": []
+          },
+          {
+            "id": "241311",
+            "text": "241311 – Processed fruit and vegetable products (incl. juices)",
+            "children": []
+          },
+          {
+            "id": "241312",
+            "text": "241312 – Processed meat products",
+            "children": []
+          },
+          {
+            "id": "241313",
+            "text": "241313 – Sugar, sweeteners and confectionery products",
+            "children": []
+          },
+          {
+            "id": "241399",
+            "text": "241399 – Processed food products and beverages (excl. dairy products) not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2414",
+        "text": "2414 – Processed non-food agriculture products (excl. wood, paper and fibre)",
+        "children": [
+          {
+            "id": "241401",
+            "text": "241401 – Essential oils ",
+            "children": []
+          },
+          {
+            "id": "241402",
+            "text": "241402 – Organic fertilisers",
+            "children": []
+          },
+          {
+            "id": "241403",
+            "text": "241403 – Plant extracts ",
+            "children": []
+          },
+          {
+            "id": "241404",
+            "text": "241404 – Prepared animal feed",
+            "children": []
+          },
+          {
+            "id": "241499",
+            "text": "241499 – Processed non-food agricultural products (excl. wood, paper and fibre) not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2415",
+        "text": "2415 – Transport equipment",
+        "children": [
+          {
+            "id": "241501",
+            "text": "241501 – Aerospace equipment",
+            "children": []
+          },
+          {
+            "id": "241502",
+            "text": "241502 – Automotive equipment",
+            "children": []
+          },
+          {
+            "id": "241503",
+            "text": "241503 – Nautical equipment",
+            "children": []
+          },
+          {
+            "id": "241504",
+            "text": "241504 – Rail equipment",
+            "children": []
+          },
+          {
+            "id": "241599",
+            "text": "241599 – Transport equipment not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2416",
+        "text": "2416 – Veterinary pharmaceutical products",
+        "children": [
+          {
+            "id": "241601",
+            "text": "241601 – Veterinary biological preventatives ",
+            "children": []
+          },
+          {
+            "id": "241602",
+            "text": "241602 – Veterinary diagnostics",
+            "children": []
+          },
+          {
+            "id": "241603",
+            "text": "241603 – Veterinary pharmaceutical treatments ",
+            "children": []
+          },
+          {
+            "id": "241699",
+            "text": "241699 – Veterinary pharmaceutical products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2417",
+        "text": "2417 – Wood, wood products and paper ",
+        "children": [
+          {
+            "id": "241701",
+            "text": "241701 – Paper products and pulp ",
+            "children": []
+          },
+          {
+            "id": "241702",
+            "text": "241702 – Printing and publishing processes",
+            "children": []
+          },
+          {
+            "id": "241703",
+            "text": "241703 – Reconstituted timber products ",
+            "children": []
+          },
+          {
+            "id": "241704",
+            "text": "241704 – Wood products ",
+            "children": []
+          },
+          {
+            "id": "241705",
+            "text": "241705 – Wood sawing and veneer",
+            "children": []
+          },
+          {
+            "id": "241799",
+            "text": "241799 – Wood, wood products and paper not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2499",
+        "text": "2499 – Other manufacturing",
+        "children": [
+          {
+            "id": "249999",
+            "text": "249999 – Other manufacturing not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "text": "25 – MINERAL RESOURCES (EXCL. ENERGY RESOURCES) ",
+    "children": [
+      {
+        "id": "2501",
+        "text": "2501 – Environmentally sustainable mineral resource activities",
+        "children": [
+          {
+            "id": "250101",
+            "text": "250101 – Management of gaseous waste from mineral resource activities (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "250102",
+            "text": "250102 – Management of liquid waste from mineral resource activities (excl. water)",
+            "children": []
+          },
+          {
+            "id": "250103",
+            "text": "250103 – Management of solid waste from mineral resource activities",
+            "children": []
+          },
+          {
+            "id": "250104",
+            "text": "250104 – Management of water consumption by mineral resource activities",
+            "children": []
+          },
+          {
+            "id": "250199",
+            "text": "250199 – Environmentally sustainable mineral resource activities not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2502",
+        "text": "2502 – First stage treatment of minerals",
+        "children": [
+          {
+            "id": "250201",
+            "text": "250201 – Alumina production",
+            "children": []
+          },
+          {
+            "id": "250202",
+            "text": "250202 – Beneficiation of bauxite and aluminium ores (excl. alumina production)",
+            "children": []
+          },
+          {
+            "id": "250203",
+            "text": "250203 – Beneficiation or dressing of iron ores",
+            "children": []
+          },
+          {
+            "id": "250204",
+            "text": "250204 – Beneficiation or dressing of non-metallic minerals (incl. diamonds)",
+            "children": []
+          },
+          {
+            "id": "250205",
+            "text": "250205 – Concentrating processes of base metal ores (excl. aluminium and iron ores)",
+            "children": []
+          },
+          {
+            "id": "250206",
+            "text": "250206 – Production of unrefined precious metal ingots and concentrates",
+            "children": []
+          },
+          {
+            "id": "250299",
+            "text": "250299 – First stage treatment of minerals not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2503",
+        "text": "2503 – Mineral exploration",
+        "children": [
+          {
+            "id": "250301",
+            "text": "250301 – Aluminium ore exploration",
+            "children": []
+          },
+          {
+            "id": "250302",
+            "text": "250302 – Copper ore exploration",
+            "children": []
+          },
+          {
+            "id": "250303",
+            "text": "250303 – Diamond exploration",
+            "children": []
+          },
+          {
+            "id": "250304",
+            "text": "250304 – Iron ore exploration",
+            "children": []
+          },
+          {
+            "id": "250305",
+            "text": "250305 – Precious (noble) metal ore exploration",
+            "children": []
+          },
+          {
+            "id": "250306",
+            "text": "250306 – Stone and clay exploration",
+            "children": []
+          },
+          {
+            "id": "250307",
+            "text": "250307 – Titanium minerals, zircon, and rare earth metal ore (e.g. monazite) exploration",
+            "children": []
+          },
+          {
+            "id": "250308",
+            "text": "250308 – Zinc ore exploration",
+            "children": []
+          },
+          {
+            "id": "250399",
+            "text": "250399 – Mineral exploration not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2504",
+        "text": "2504 – Primary mining and extraction of minerals",
+        "children": [
+          {
+            "id": "250401",
+            "text": "250401 – Mining and extraction of aluminium ores",
+            "children": []
+          },
+          {
+            "id": "250402",
+            "text": "250402 – Mining and extraction of copper ores",
+            "children": []
+          },
+          {
+            "id": "250403",
+            "text": "250403 – Mining and extraction of diamonds",
+            "children": []
+          },
+          {
+            "id": "250404",
+            "text": "250404 – Mining and extraction of iron ores",
+            "children": []
+          },
+          {
+            "id": "250405",
+            "text": "250405 – Mining and extraction of precious (noble) metal ores",
+            "children": []
+          },
+          {
+            "id": "250406",
+            "text": "250406 – Mining and extraction of stone and clay",
+            "children": []
+          },
+          {
+            "id": "250407",
+            "text": "250407 – Mining and extraction of titanium minerals, zircon, and rare earth metal ores (e.g. monazite)",
+            "children": []
+          },
+          {
+            "id": "250408",
+            "text": "250408 – Mining and extraction of zinc ores",
+            "children": []
+          },
+          {
+            "id": "250499",
+            "text": "250499 – Primary mining and extraction of minerals not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2599",
+        "text": "2599 – Other mineral resources (excl. energy resources)",
+        "children": [
+          {
+            "id": "259999",
+            "text": "259999 – Other mineral resources (excl. energy resources) not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "text": "26 – PLANT PRODUCTION AND PLANT PRIMARY PRODUCTS",
+    "children": [
+      {
+        "id": "2601",
+        "text": "2601 – Environmentally sustainable plant production",
+        "children": [
+          {
+            "id": "260101",
+            "text": "260101 – Management of gaseous waste from plant production (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "260102",
+            "text": "260102 – Management of liquid waste from plant production (excl. water)",
+            "children": []
+          },
+          {
+            "id": "260103",
+            "text": "260103 – Management of solid waste from plant production",
+            "children": []
+          },
+          {
+            "id": "260104",
+            "text": "260104 – Management of water consumption by plant production",
+            "children": []
+          },
+          {
+            "id": "260199",
+            "text": "260199 – Environmentally sustainable plant production not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2602",
+        "text": "2602 – Forestry",
+        "children": [
+          {
+            "id": "260201",
+            "text": "260201 – Hardwood plantations",
+            "children": []
+          },
+          {
+            "id": "260202",
+            "text": "260202 – Harvesting and transport of forest products",
+            "children": []
+          },
+          {
+            "id": "260203",
+            "text": "260203 – Integration of farm and forestry",
+            "children": []
+          },
+          {
+            "id": "260204",
+            "text": "260204 – Native forests",
+            "children": []
+          },
+          {
+            "id": "260205",
+            "text": "260205 – Softwood plantations",
+            "children": []
+          },
+          {
+            "id": "260299",
+            "text": "260299 – Forestry not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2603",
+        "text": "2603 – Grains and seeds",
+        "children": [
+          {
+            "id": "260301",
+            "text": "260301 – Barley",
+            "children": []
+          },
+          {
+            "id": "260302",
+            "text": "260302 – Canola",
+            "children": []
+          },
+          {
+            "id": "260303",
+            "text": "260303 – Grain legumes",
+            "children": []
+          },
+          {
+            "id": "260304",
+            "text": "260304 – Linseed",
+            "children": []
+          },
+          {
+            "id": "260305",
+            "text": "260305 – Lupins",
+            "children": []
+          },
+          {
+            "id": "260306",
+            "text": "260306 – Maize",
+            "children": []
+          },
+          {
+            "id": "260307",
+            "text": "260307 – Oats",
+            "children": []
+          },
+          {
+            "id": "260308",
+            "text": "260308 – Rice",
+            "children": []
+          },
+          {
+            "id": "260309",
+            "text": "260309 – Safflower seed",
+            "children": []
+          },
+          {
+            "id": "260310",
+            "text": "260310 – Sorghum",
+            "children": []
+          },
+          {
+            "id": "260311",
+            "text": "260311 – Soybeans",
+            "children": []
+          },
+          {
+            "id": "260312",
+            "text": "260312 – Wheat",
+            "children": []
+          },
+          {
+            "id": "260399",
+            "text": "260399 – Grains and seeds not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2604",
+        "text": "2604 – Harvesting and packaging of plant products",
+        "children": [
+          {
+            "id": "260401",
+            "text": "260401 – Cotton lint and cotton seed",
+            "children": []
+          },
+          {
+            "id": "260402",
+            "text": "260402 – Fresh fruits and vegetables (post harvest)",
+            "children": []
+          },
+          {
+            "id": "260403",
+            "text": "260403 – Sugar cane (cut for crushing)",
+            "children": []
+          },
+          {
+            "id": "260404",
+            "text": "260404 – Unprocessed grains",
+            "children": []
+          },
+          {
+            "id": "260405",
+            "text": "260405 – Unprocessed industrial crops (excl. sugar and cotton)",
+            "children": []
+          },
+          {
+            "id": "260406",
+            "text": "260406 – Unprocessed seeds",
+            "children": []
+          },
+          {
+            "id": "260499",
+            "text": "260499 – Harvesting and packaging of plant products not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2605",
+        "text": "2605 – Horticultural crops",
+        "children": [
+          {
+            "id": "260501",
+            "text": "260501 – Almonds",
+            "children": []
+          },
+          {
+            "id": "260502",
+            "text": "260502 – Avocado",
+            "children": []
+          },
+          {
+            "id": "260503",
+            "text": "260503 – Berry fruit (excl. kiwifruit)",
+            "children": []
+          },
+          {
+            "id": "260504",
+            "text": "260504 – Citrus fruit",
+            "children": []
+          },
+          {
+            "id": "260505",
+            "text": "260505 – Field grown vegetable crops",
+            "children": []
+          },
+          {
+            "id": "260506",
+            "text": "260506 – Kiwifruit",
+            "children": []
+          },
+          {
+            "id": "260507",
+            "text": "260507 – Macadamias",
+            "children": []
+          },
+          {
+            "id": "260508",
+            "text": "260508 – Mushrooms and truffles",
+            "children": []
+          },
+          {
+            "id": "260509",
+            "text": "260509 – Olives",
+            "children": []
+          },
+          {
+            "id": "260510",
+            "text": "260510 – Ornamentals, natives, flowers and nursery plants",
+            "children": []
+          },
+          {
+            "id": "260511",
+            "text": "260511 – Pome fruit, pip fruit",
+            "children": []
+          },
+          {
+            "id": "260512",
+            "text": "260512 – Protected vegetable crops",
+            "children": []
+          },
+          {
+            "id": "260513",
+            "text": "260513 – Stone fruit (excl. avocado)",
+            "children": []
+          },
+          {
+            "id": "260514",
+            "text": "260514 – Table grapes",
+            "children": []
+          },
+          {
+            "id": "260515",
+            "text": "260515 – Tree nuts (excl. almonds and macadamias)",
+            "children": []
+          },
+          {
+            "id": "260516",
+            "text": "260516 – Tropical fruit",
+            "children": []
+          },
+          {
+            "id": "260599",
+            "text": "260599 – Horticultural crops not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2606",
+        "text": "2606 – Industrial crops",
+        "children": [
+          {
+            "id": "260601",
+            "text": "260601 – Cannabis",
+            "children": []
+          },
+          {
+            "id": "260602",
+            "text": "260602 – Cotton",
+            "children": []
+          },
+          {
+            "id": "260603",
+            "text": "260603 – Essential oil crops",
+            "children": []
+          },
+          {
+            "id": "260604",
+            "text": "260604 – Hemp",
+            "children": []
+          },
+          {
+            "id": "260605",
+            "text": "260605 – Hops",
+            "children": []
+          },
+          {
+            "id": "260606",
+            "text": "260606 – Plant extract crops",
+            "children": []
+          },
+          {
+            "id": "260607",
+            "text": "260607 – Sugar",
+            "children": []
+          },
+          {
+            "id": "260608",
+            "text": "260608 – Wine grapes",
+            "children": []
+          },
+          {
+            "id": "260699",
+            "text": "260699 – Industrial crops not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2699",
+        "text": "2699 – Other plant production and plant primary products",
+        "children": [
+          {
+            "id": "269901",
+            "text": "269901 – Climate adaptive plants",
+            "children": []
+          },
+          {
+            "id": "269902",
+            "text": "269902 – Forest product traceability and quality assurance",
+            "children": []
+          },
+          {
+            "id": "269903",
+            "text": "269903 – Plant product traceability and quality assurance (excl. forest products)",
+            "children": []
+          },
+          {
+            "id": "269999",
+            "text": "269999 – Other plant production and plant primary products not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "text": "27 – TRANSPORT",
+    "children": [
+      {
+        "id": "2701",
+        "text": "2701 – Aerospace transport",
+        "children": [
+          {
+            "id": "270101",
+            "text": "270101 – Air freight",
+            "children": []
+          },
+          {
+            "id": "270102",
+            "text": "270102 – Air passenger transport",
+            "children": []
+          },
+          {
+            "id": "270103",
+            "text": "270103 – Air safety and traffic management",
+            "children": []
+          },
+          {
+            "id": "270104",
+            "text": "270104 – Air terminal infrastructure and management",
+            "children": []
+          },
+          {
+            "id": "270105",
+            "text": "270105 – Autonomous air vehicles ",
+            "children": []
+          },
+          {
+            "id": "270106",
+            "text": "270106 – Space transport",
+            "children": []
+          },
+          {
+            "id": "270199",
+            "text": "270199 – Aerospace transport not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2702",
+        "text": "2702 – Environmentally sustainable transport activities",
+        "children": [
+          {
+            "id": "270201",
+            "text": "270201 – Management of gaseous waste from transport activities (excl. greenhouse gases)",
+            "children": []
+          },
+          {
+            "id": "270202",
+            "text": "270202 – Management of liquid waste from transport activities (excl. water)",
+            "children": []
+          },
+          {
+            "id": "270203",
+            "text": "270203 – Management of noise and vibration from transport activities",
+            "children": []
+          },
+          {
+            "id": "270204",
+            "text": "270204 – Management of solid waste from transport activities",
+            "children": []
+          },
+          {
+            "id": "270205",
+            "text": "270205 – Management of water consumption by transport activities",
+            "children": []
+          },
+          {
+            "id": "270299",
+            "text": "270299 – Environmentally sustainable transport activities not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2703",
+        "text": "2703 – Ground transport",
+        "children": [
+          {
+            "id": "270301",
+            "text": "270301 – Active ground transport ",
+            "children": []
+          },
+          {
+            "id": "270302",
+            "text": "270302 – Autonomous road vehicles",
+            "children": []
+          },
+          {
+            "id": "270303",
+            "text": "270303 – Heavy rail infrastructure and networks",
+            "children": []
+          },
+          {
+            "id": "270304",
+            "text": "270304 – Rail freight",
+            "children": []
+          },
+          {
+            "id": "270305",
+            "text": "270305 – Rail passenger movements",
+            "children": []
+          },
+          {
+            "id": "270306",
+            "text": "270306 – Rail safety",
+            "children": []
+          },
+          {
+            "id": "270307",
+            "text": "270307 – Road freight",
+            "children": []
+          },
+          {
+            "id": "270308",
+            "text": "270308 – Road infrastructure and networks",
+            "children": []
+          },
+          {
+            "id": "270309",
+            "text": "270309 – Road passenger movements (excl. public transport)",
+            "children": []
+          },
+          {
+            "id": "270310",
+            "text": "270310 – Road public transport",
+            "children": []
+          },
+          {
+            "id": "270311",
+            "text": "270311 – Road safety",
+            "children": []
+          },
+          {
+            "id": "270312",
+            "text": "270312 – Urban rail infrastructure and networks (incl. light and metro rail)",
+            "children": []
+          },
+          {
+            "id": "270399",
+            "text": "270399 – Ground transport not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2704",
+        "text": "2704 – Water transport",
+        "children": [
+          {
+            "id": "270401",
+            "text": "270401 – Autonomous water vehicles",
+            "children": []
+          },
+          {
+            "id": "270402",
+            "text": "270402 – Coastal sea freight transport",
+            "children": []
+          },
+          {
+            "id": "270403",
+            "text": "270403 – Domestic passenger water transport (e.g. ferries)",
+            "children": []
+          },
+          {
+            "id": "270404",
+            "text": "270404 – International passenger water transport (e.g. passenger ships)",
+            "children": []
+          },
+          {
+            "id": "270405",
+            "text": "270405 – International sea freight transport (excl. live animals, food products and liquefied gas)",
+            "children": []
+          },
+          {
+            "id": "270406",
+            "text": "270406 – International sea transport of food products",
+            "children": []
+          },
+          {
+            "id": "270407",
+            "text": "270407 – International sea transport of liquefied gas",
+            "children": []
+          },
+          {
+            "id": "270408",
+            "text": "270408 – International sea transport of live animals",
+            "children": []
+          },
+          {
+            "id": "270409",
+            "text": "270409 – Port infrastructure and management",
+            "children": []
+          },
+          {
+            "id": "270410",
+            "text": "270410 – Water safety",
+            "children": []
+          },
+          {
+            "id": "270499",
+            "text": "270499 – Water transport not elsewhere classified",
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "2799",
+        "text": "2799 – Other transport",
+        "children": [
+          {
+            "id": "279901",
+            "text": "279901 – Intermodal materials handling",
+            "children": []
+          },
+          {
+            "id": "279902",
+            "text": "279902 – Multimodal transport",
+            "children": []
+          },
+          {
+            "id": "279903",
+            "text": "279903 – Pipeline transport",
+            "children": []
+          },
+          {
+            "id": "279904",
+            "text": "279904 – Postal and package services (incl. courier services)",
+            "children": []
+          },
+          {
+            "id": "279999",
+            "text": "279999 – Other transport not elsewhere classified",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "text": "28 – EXPANDING KNOWLEDGE",
+    "children": [
+      {
+        "id": "2801",
+        "text": "2801 – Expanding knowledge",
+        "children": [
+          {
+            "id": "280101",
+            "text": "280101 – Expanding knowledge in the agricultural, food and veterinary sciences",
+            "children": []
+          },
+          {
+            "id": "280102",
+            "text": "280102 – Expanding knowledge in the biological sciences",
+            "children": []
+          },
+          {
+            "id": "280103",
+            "text": "280103 – Expanding knowledge in the biomedical and clinical sciences",
+            "children": []
+          },
+          {
+            "id": "280104",
+            "text": "280104 – Expanding knowledge in built environment and design",
+            "children": []
+          },
+          {
+            "id": "280105",
+            "text": "280105 – Expanding knowledge in the chemical sciences",
+            "children": []
+          },
+          {
+            "id": "280106",
+            "text": "280106 – Expanding knowledge in commerce, management, tourism and services",
+            "children": []
+          },
+          {
+            "id": "280107",
+            "text": "280107 – Expanding knowledge in the earth sciences",
+            "children": []
+          },
+          {
+            "id": "280108",
+            "text": "280108 – Expanding knowledge in economics",
+            "children": []
+          },
+          {
+            "id": "280109",
+            "text": "280109 – Expanding knowledge in education",
+            "children": []
+          },
+          {
+            "id": "280110",
+            "text": "280110 – Expanding knowledge in engineering",
+            "children": []
+          },
+          {
+            "id": "280111",
+            "text": "280111 – Expanding knowledge in the environmental sciences",
+            "children": []
+          },
+          {
+            "id": "280112",
+            "text": "280112 – Expanding knowledge in the health sciences",
+            "children": []
+          },
+          {
+            "id": "280113",
+            "text": "280113 – Expanding knowledge in history, heritage and archaeology",
+            "children": []
+          },
+          {
+            "id": "280114",
+            "text": "280114 – Expanding knowledge in Indigenous studies",
+            "children": []
+          },
+          {
+            "id": "280115",
+            "text": "280115 – Expanding knowledge in the information and computing sciences",
+            "children": []
+          },
+          {
+            "id": "280116",
+            "text": "280116 – Expanding knowledge in language, communication and culture",
+            "children": []
+          },
+          {
+            "id": "280117",
+            "text": "280117 – Expanding knowledge in law and legal studies",
+            "children": []
+          },
+          {
+            "id": "280118",
+            "text": "280118 – Expanding knowledge in the mathematical sciences",
+            "children": []
+          },
+          {
+            "id": "280119",
+            "text": "280119 – Expanding knowledge in philosophy and religious studies",
+            "children": []
+          },
+          {
+            "id": "280120",
+            "text": "280120 – Expanding knowledge in the physical sciences",
+            "children": []
+          },
+          {
+            "id": "280121",
+            "text": "280121 – Expanding knowledge in psychology",
+            "children": []
+          },
+          {
+            "id": "280122",
+            "text": "280122 – Expanding knowledge in creative arts and writing studies",
+            "children": []
+          },
+          {
+            "id": "280123",
+            "text": "280123 – Expanding knowledge in human society",
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]
+
+// Initialize jsTree
+  $('#seo-tree').jstree({
+    'core': {
+      'data': seoData,
+      'themes': { 'dots': true, 'icons': true }
+    },
+    'plugins': ["search", "wholerow"],
+    'search': {
+      'show_only_matches': true,
+      'show_only_matches_children': true,
+      'search_callback': function(str, node) {
+        return node.text.toLowerCase().includes(str.toLowerCase());
+      }
+    }
+  });
+
+  // Search input
+  var to = false;
+  $('#tree-search').keyup(function () {
+    if(to) { clearTimeout(to); }
+    to = setTimeout(function () {
+      var v = $('#tree-search').val();
+      $('#seo-tree').jstree(true).search(v);
+    }, 250);
+  });
+</script>
+
+</body>
+</html>
